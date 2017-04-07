@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="local_notification">本地通知</string>
+    <string name="new_local_notification">新建本地通知</string>
+    <string name="modify_local_notification">修改本地通知</string>
+    <string name="add_local_notification">新建</string>
+    <string name="create_local_notification">添加</string>
+    <string name="update_local_notification">修改</string>
+    <string name="clear_local_notification">清除</string>
+    <string name="local_notification_title">标题</string>
+    <string name="local_notification_content">内容</string>
+    <string name="local_notification_ticker">提示</string>
+    <string name="local_notification_datetime">时间</string>
+    <string name="local_notification_repeatingnum">重复数</string>
+    <string name="local_notification_repeatingunit">重复单位</string>
+    <string name="local_notification_repeatinginterval">重复间隔</string>
+    <string name="local_notification_specialday">节日</string>
+    <string name="year">年</string>
+    <string name="lunarYear">年(阴历)</string>
+    <string name="month">月</string>
+    <string name="lunarMonth">月(阴历)</string>
+    <string name="day">日</string>
+    <string name="lunarDay">日(阴历)</string>
+    <string name="hour">小时</string>
+    <string name="minute">分钟</string>
+    <string name="second">秒</string>
+    <string name="repeatingNum">重复数</string>
+    <string name="repeatingUnit">重复单位</string>
+    <string name="repeatingInterval">重复间隔</string>
+    <string name="specialDay">节日</string>
+    <string name="title">标题</string>
+    <string name="content">内容</string>
+    <string name="ticker">提示</string>
+    <string name="flags">Flags</string>
+    <string name="defaults">Defaults</string>
+    <string name="smallIconDrawable">小图标</string>
+    <string name="largeIconDrawable">大图标</string>
+    <string name="soundDrawable">声音</string>
+    <string name="playVibrate">振动</string>
+    <string name="playLights">闪光</string>
+    <string name="playSound">声响</string>
+    <string name="screenOn">开屏</string>
+    <string name="layoutId">自定义样式</string>
+    <string name="layoutTitleId">自定义标题</string>
+    <string name="layoutContentId">自定义内容</string>
+    <string name="layoutIconId">自定义小图标</string>
+    <string name="layoutIconDrawableId">自定义大图标</string>
+    <string name="notificationSetting">通知设置</string>
+    <string name="builderSetting">通知样式设置</string>
+    <string name="repeatingNumHint">-1表示一直重复</string>
+    <string name="needed">必填</string>
+    <string name="search">搜索</string>
+    <string name="search_text">根据通知ID或标题内容查找...</string>
+    <string name="clearlog">清除日志</string>
+    <string name="show_card_message">展示插屏</string>
+    <string name="edalias">Tags/Alias/Excusive Alias</string>
+    <string name="edaliasType">Alias Type</string>
+    <string name="app_name">Smart Pricing</string>
+    <string name="again_press_exite_str">Press the return key to close the program again!</string>
+    <!-- 底座文字 -->
+    <string name="consumed_tab">消费查询</string>
+    <string name="recharge_tab">充值</string>
+    <string name="home_tab">无</string>
+    <string name="DIYpackage_tab">DIY套餐</string>
+    <string name="mine_tab">个人中心</string>
+    <!-- 功能提示界面 -->
+    <string name="tutorial_name">Smart Pricing, built for you</string>
+    <string name="tutorial_context_one">In order for you to get the most out of the app and for us to to improve our services, we may use information from your device.  </string>
+    <string name="tutorial_context_two">Data such as your location, information about the quality and use of your communications services, apps on your device as well as how you use My Vodafone help us improve our service and tailor recommendations to you.  You can change what information is collected and used, as well as control the way we communicate with you at any time by visiting settings.</string>
+    <string name="tutorial_context_three">By tapping on \'OK\' you agree to allow Vodafone to collect your data and agree to our&#160;</string>
+    <string name="tutorial_context_four">Privacy policy</string>
+    <string name="tutorial_context_five">&#160;and&#160;</string>
+    <string name="tutorial_context_six">T&#038;C\'s.</string>
+    <string name="cancle_btn">Cancel</string>
+    <string name="ok_btn">Ok</string>
+    <!-- 登录界面 -->
+    <string name="login_name_one">Login to</string>
+    <string name="login_name_two">Smart Pricing</string>
+    <string name="login_user_name">Username</string>
+    <string name="hint_user_name">e.g.jhon_lewis88</string>
+    <string name="login_Password">Password</string>
+    <string name="hint_Password">Your saved password</string>
+    <string name="login_btn">Log in</string>
+    <string name="pwd_error">You typed an invalid password</string>
+    <string name="enter_five_error">Sorry your account is now locked. You\'ve entered your details incorrectly more than 5 times. You will need to reset your account.</string>
+    <string name="reset_account_btn">Reset your account now</string>
+    <string name="forgotten_btn">Forgotten password</string>
+    <string name="login_name_three">Not registered with</string>
+    <string name="login_name_four">Smart Pricing?</string>
+    <string name="register_btn">Register now</string>
+    <!-- 忘记密码 -->
+    <string name="forgtten_title">Reset the password</string>
+    <string name="confim_pwd">Confirm password</string>
+    <string name="check">check</string>
+    <string name="new_pwd">New password</string>
+    <string name="send_code">send code</string>
+    <string name="enter_code">Enter code</string>
+    <string name="your_number">Enter your Number</string>
+
+    <!-- 欢迎页 -->
+    <string name="tip_next">Next tip</string>
+    <string name="tip_start">Get started</string>
+    <string name="tip_close">Close</string>
+    <string name="tip_one_one">Tip 1 of 4</string>
+    <string name="tip_one_two">Good morning,Alice</string>
+    <string name="tip_one_three">Welcome to My Vodafone</string>
+    <string name="tip_one_four">No data spend</string>
+    <string name="tip_one_five">When using this app, you won\'t spend any of your data allowance.</string>
+    <string name="tip_two_one">Tip 2 of 4</string>
+    <string name="tip_two_onee">Tip 3 of 4</string>
+    <string name="tip_two_oneee">Tip 4 of 4</string>
+    <string name="tip_two_two">Service switcher</string>
+    <string name="tip_two_three">If you have more than one service on your account you can tap the service switcher to choose another.  You can also use the side menu to access your services(top right).</string>
+    <string name="tip_three_one">Usage dial</string>
+    <string name="tip_three_two">The dial shows your usage.  You can switch between data, calls &#038; texts.  Tap the + sign to add more data or minutes.</string>
+    <string name="tip_four_one">Current spend</string>
+    <string name="tip_four_two">Finally, to see your current spend and view your bills you should take a look at the bottom of the screen.</string>
+
+    <!-- 条款 -->
+    <string name="terms">Terms &#038; Conditions</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="argee_title">©Copyright 2015 My Vodafone 5.0.1</string>
+    <string name="argee_context">1. Licence</string>
+    <string name="argee_context1">Lorem ipsum dolor sit amet, consect etur adipiscing elit. Integer sit amet iaculis justo. Integer vestibulum.</string>
+    <string name="argee_context2">2. Charges</string>
+    <string name="argee_context3">When using this app you will not spend any of your data allowance.</string>
+    <string name="argee_context4">3. Exclusion of warranties and</string>
+    <string name="argee_context44">limitation of liability</string>
+    <string name="argee_context5">Aliquam lobortis rhoncus elit ac max imus. Nam vestibulum ipsum ut ligula lacinia, condimentum scelerisque dui.</string>
+    <string name="argee_context6">4. Lorem ipsum</string>
+    <string name="argee_context7">Aliquam lobortis rhoncus elit ac max imus. Nam vestibulum ipsum ut ligula lacinia, condimentum scelerisque dui.</string>
+    <string name="argee_context8">5. Lorem ipsum</string>
+    <string name="argee_context9">Aliquam lobortis rhoncus elit ac max imus. </string>
+    <string name="privacy_context0">1. How Vodafone will use the information</string>
+    <string name="privacy_context00">collected (or shared)</string>
+    <string name="privacy_context1">The purpose of collecting this information is to help improve Vodafone networks and services. We analyse the collected information to diagnose connectivity, coverage or connection quality problems, understand connectivity needs from the usage of mobile data, Wi-Fi and applications, and use such insights to make improvements to our network and services.</string>
+    <string name="privacy_context2">The collected information helps us understand, for example, where are the areas of weak coverage so that we can improve it, to determine whether poor performance might be caused by the movement of the device in a certain direction or due to some other reason, such as device type or the battery state or application usage. Through the collected information we understand better how to improve device and network data efficiency, how different device types,applications and Wifi and mobile usage patterns impact data volumes and we evaluate the performance of different devices in our network and diagnose phone related problems as well as other such uses.</string>
+    <string name="privacy_context3">We do not sell or share the collected information with other third parties than those who process this information on our behalf.</string>
+    <string name="privacy_context4">2. Some basic privacy facts</string>
+    <string name="privacy_context41">•  numbers you dial or that dial you</string>
+    <string name="privacy_context42">•  any content of your communications</string>
+    <string name="privacy_context43">•  content, sender or receiver information of</string>
+    <string name="privacy_context433">text messages on your device</string>
+    <string name="privacy_context431">•  the names of the Wi-Fi hot spots used. </string>
+    <string name="privacy_context432">All personal identifiers are removed in the app before sending to Vodafone and we process the collected information anonymously. We do not intend to use the information to identify you or any other person personally and we have in place appropriate technical and organizational measures to prevent such from happening.</string>
+    <string name="privacy_context5">3. Coverage, connectivity and data usage</string>
+    <string name="privacy_context51">Vodafone will capture statistics about network connectivity and quality for phone calls, internet and data services as well as statistics about how much your device uses internet services and consumes data, such as:</string>
+    <string name="privacy_context511">•  the percentage of time your phone is on the network</string>
+    <string name="privacy_context512">•  signal strength</string>
+    <string name="privacy_context513">•  areas of limited or no service</string>
+    <string name="privacy_context514">•  quality of the coverage (2G, 3G, 4G)</string>
+    <string name="privacy_context515">•  call duration</string>
+    <string name="privacy_context516">•  how the call ends</string>
+    <string name="privacy_context517">•  every hour, a test of whether you can </string>
+    <string name="privacy_context5110"> connect to the internet </string>
+    <string name="privacy_context518">•  your upload and download speed</string>
+    <string name="privacy_context519">•  how long it takes to set up a connection </string>
+    <string name="privacy_context5111"> to the internet</string>
+    <string name="privacy_context5112">•  Wi-Fi connection quality and MAC addresses </string>
+    <string name="privacy_context5113">of the Wi-Fi hot spots your device can see,  </string>
+    <string name="privacy_context5114">and how congested they are</string>
+    <string name="privacy_context5115">•  hourly data use</string>
+    <string name="privacy_context5116">•  how much data your phone uses when </string>
+    <string name="privacy_context5117">it\'s in standby mode </string>
+    <string name="privacy_context5118">•  how much data goes over Wi-Fi </string>
+    <string name="privacy_context5119">connections vs. the cellular network </string>
+    <string name="privacy_context6">4. Applications</string>
+    <string name="privacy_context61">Vodafone will capture statistics about the use of applications on your phone, such as: </string>
+    <string name="privacy_context611">•  what apps are installed on your phone</string>
+    <string name="privacy_context612">•  what apps are started each day</string>
+    <string name="privacy_context613">•  how long they are used</string>
+    <string name="privacy_context614">•  how much data and how fast each app </string>
+    <string name="privacy_context615">receives and transmits </string>
+    <string name="privacy_context7">5. Device Information</string>
+    <string name="privacy_context71">Vodafone will capture technical information about your device, such as:</string>
+    <string name="privacy_context712">•  phone brand and model</string>
+    <string name="privacy_context713">•  operating system</string>
+    <string name="privacy_context714">•  firmware version</string>
+    <string name="privacy_context715">•  hardware capabilities</string>
+    <string name="privacy_context716">•  language and locale</string>
+    <string name="privacy_context717">•  battery state</string>
+    <string name="privacy_context718">•  memory consumption</string>
+    <string name="privacy_context719">•  time since last reboot</string>
+    <string name="privacy_context81">6. Location</string>
+    <string name="privacy_context82">When we measure the items above related to coverage and usage, we know your rough location from the phone mast and Wi-Fi hot spot your phone is using. hen your phone or one of your apps is using GPS location data, we use that to assess location more precisely and sometimes your speed and direction of travel if available with GPS information.</string>
+
+    <!-- 侧滑支持 -->
+    <string name="current_text">Current spend and bills</string>
+    <string name="products_text">Your products and services</string>
+    <string name="offer_extras">Offers and extras for you</string>
+    <string name="travelling">Travelling abroad</string>
+    <string name="support_text">24/7 support</string>
+    <string name="store_locator">Store locator</string>
+    <string name="network">Network</string>
+    <string name="speed_checker">Speed checker</string>
+    <string name="network_usage">Network usage</string>
+    <string name="broadband_finder">Broadband finder</string>
+    <string name="wifi_finder">Wi-Fi finder</string>
+    <string name="notifications">Notifications</string>
+    <string name="settings">Settings</string>
+    <string name="version">Version</string>
+    <string name="log_out">Log out</string>
+
+    <!-- 首页文字 -->
+    <string name="vodafone">Smart Pricing</string>
+    <string name="welcome_text">Welcome to </string>
+    <string name="gb">1GB</string>
+    <string name="more">More</string>
+    <string name="phone">phone</string>
+    <string name="support">support</string>
+    <string name="to_reset"><b>12 days</b> to reset</string>
+    <string name="credit_remain">Balance remaining</string>
+    <string name="plan_spend">Out of plan spend</string>
+    <string name="current_spend">See all current spend</string>
+    <string name="billing_history">See billing history</string>
+    <string name="select_a_service">Select a user</string>
+    <string name="search_hint">Search</string>
+    <string name="popular_search">Popular search terms:</string>
+    <string name="time_out_dialog">Your last chat session has timed out</string>
+    <string name="restart_chat">Restart new chat</string>
+    <string name="start_chat">Start new chat</string>
+ <string name="out_plan_bill">includes <b>€5.00</b> out plan spend</string>
+  
+    <!-- 增加流量 -->
+    <string name="Data_add_on">Data add-on</string>
+    <string name="add_text">Based on your current spend we think a 1GB data add-on should keep you going until your allowance renews next month.</string>
+    <string name="no_thanks">No thanks</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="browse_all_extras">Browse all extras</string>
+    <!-- dialog -->
+    <string name="bill_ready">Your new bill is ready</string>
+    <string name="bill_ready_text">This month your bill was a bit higher than usual.would you like to review your out of plan spend?</string>
+    <string name="dialog_ok">Yes please</string>
+    <string name="dialog_confirm">confirm</string>
+    <string name="dialog_cancel">cancel</string>
+
+    <!-- 充值 -->
+    <string name="top_up">Top up</string>
+    <string name="myupdate">Update</string>
+    <string name="warning">Sorry.the phone number entered is not recognised</string>
+    <string name="moblie_number">1.Mobile number you want to top up</string>
+    <string name="amount_to_top_up">2.Amount to top up</string>
+    <string name="payment_type">3.Payment type</string>
+    <string name="mobile_number_hint">mobile number</string>
+    <string name="amount_hint">amount</string>
+    <string name="someone_else"><u>Buying for someone else?</u></string>
+    <string name="other">Other</string>
+    <string name="please_select">Please select</string>
+    <string name="proceed">Proceed</string>
+    <string name="visa_debit">Visa debit</string>
+    <string name="secure">This is a secure SSL encrypted payment</string>
+    <string name="scan_another_card">Scan another card</string>
+    <string name="number_hint">The long number on your card</string>
+    <string name="name_hint">Name on Card</string>
+    <string name="date_hint">Expiry date mm/yy</string>
+    <string name="card_security_hint">Card security code e.g 123</string>
+    <string name="paypal">Paypal</string>
+    <string name="paypal_text">You will be directly forwarded to PayPal where your order can be competed.</string>
+    <string name="scan_your_card"><u>Scan your card</u></string>
+    <string name="enter_card">Enter card details manually</string>
+    <string name="scanning_hint">Place the bank card in this area. and align the edge of the scanning frame.</string>
+
+    <!-- 签到 -->
+    <string name="sign_in">Sign in</string>
+    <string name="continuous">continuous\n<b>4days</b></string>
+    <string name="my_point">My Loyalty points</string>
+    <string name="integral_rules">How loyalty points work</string>
+    <string name="credits_exchange">Loyalty point redemption</string>
+    <string name="history">History</string>
+    <string name="integral_rules_text">Customers can get the points into the consumption and reward points.  Consumption points addcoding tp their actual consumption amount of calculation; reward points is the promotion of promotional activities to customers.\n\nAt this stage to get credit customers, only the consumption points to reach the required standards become Shandong telecomcustomer club membership, to have access to integral feedback service qualification, Shandong Telecom will be according to the grade of membership provides differentiated service feedback and non menbers can query their own access to the integral; freezing menbership, cancelled or expired, enjoy the integral feedback service qualification and freeze or cancel. \n\nClub members to implement hierarchical manangement, diamond, gold, silver, general menber four.</string>
+    <string name="detail">Detail</string>
+    <string name="exchange_now">Redeem Now</string>
+    <string name="see_all_wares">See all options</string>
+    <string name="want_to_exchange">Are you sure to redeem?</string>
+    <string name="congratulationstext">You have signed in for 10 consecutive days, and <b>100 loyalty points</b> are awarded to you.</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="loyalty_points">loyalty points</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_exchange">Redeem your points</string>
+    <string name="dialog_got">OK, I got it</string>
+    <string name="income">Earned</string>
+    <string name="expense">Spent</string>
+    <string name="error_text">We\'re experiencing a few technical difficulties at the moment, we\'ll get it sorted as soon as possible.</string>
+    
+
+    <!-- support text start -->
+    <string name="faqs">FAQs</string>
+    <string name="chat_to_us">Chat to us</string>
+    <string name="request_call">Request a call</string>
+    <string name="communities">Communities</string>
+    <string name="faqs_et_hint">Enter keyword to search...</string>
+    <string name="popular_search_terms">Popular search terms:</string>
+    <string name="search_results">Search&#160;results&#160;-&#160;</string>
+    <string name="results">&#160;results</string>
+    <string name="live_chat">Live chat</string>
+    <string name="enter_number">Please enter your mobile number</string>
+    <string name="enter_email">Please enter a valid email address</string>
+    <string name="chat_what">What would you like to chat about today?</string>
+    <string name="select_an_option">Select an option</string>
+    <string name="question_manually">Type a question manually</string>
+    <string name="start_chatting">Start chatting</string>
+    <string name="type_your_question">Please type your question below</string>
+
+    <string-array name="chat_what_array">
+        <item>Why is my bill so high?</item>
+        <item>When can I next upgrade my phone?</item>
+        <item>How much does it cost to call abroad?</item>
+        <item>My voicemail isn\'t working?</item>
+        <item>Lorem ipsum dolor torpebat?</item>
+    </string-array>
+
+    <string name="xlistview_footer_hint_normal">view more</string>
+    <string name="xlistview_footer_no_more">no more content</string>
+    <string name="xlistview_footer_hint_ready">release to load more</string>
+    <string name="xlistview_header_hint_loading">loading...</string>
+    <string name="xlistview_header_hint_normal">pull down to refresh</string>
+    <string name="xlistview_header_last_time">last update time:</string>
+    <string name="xlistview_header_hint_ready">loosen to refresh data</string>
+    <string name="send_et_hint">Type a message</string>
+    <string name="select_from_album">select from album</string>
+    <string name="take_pictures">take pictures</string>
+    <string name="cancel">cancel</string>
+    <string name="request_call_tip">Hi there, our call centres are busy at the moment,but we\'d be happy to give you a call back.</string>
+    <string name="number_manually">Type a number manually</string>
+    <string name="request_call_back">Request a call back</string>
+    <string name="update">update</string>
+    <string name="request_call_tip1">Thanks for requesting a call back from us.We appreciate your patience and will call you in approximately:</string>
+    <string name="call_us">call us</string>
+    <string name="request_week">Monday to Sunday</string>
+    <string name="request_time">8am to 9pm</string>
+    <string name="chat_to_num1">Chat to a home broadband agent:</string>
+    <string name="call_num1">Call 272</string>
+    <string name="chat_to_num2">From your Vodafone mobile:</string>
+    <string name="view_more_faqs">View more FAQs</string>
+    <string name="search_error_tip1">Sorry.There seems to be a problem loading your search results.</string>
+    <string name="search_error_tip2">Make sure you have an internet connection and retry.</string>
+    <string name="call_num2">Call 191</string>
+    <string name="call_tip">The call is free if you\'re a Pay monthly customer. There\'s a 25p one-off connection charge if you\'re on Pay as you go and speak to an advisor.</string>
+    <string name="chat_to_num3">From other UK landlines or mobiles</string>
+    <string name="call_num3">03333 040 191</string>
+    <string name="chat_to_num4">From abroad</string>
+    <string name="call_num4">+44 7836 191 191</string>
+    <string name="cancel_call">Cancel call-back</string>
+    <string name="minutes">minutes</string>
+    <string name="mobile_invalid">mobile number is invalid</string>
+    <string name="email_invalid">email is invalid</string>
+
+    <string-array name="chat_what_array1">
+        <item>Billing</item>
+        <item>My mobile plan</item>
+        <item>Broadband</item>
+        <item>Landline</item>
+        <item>Other</item>
+    </string-array>
+    <!-- support text end -->
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_offer">Offers and extras for you</string>
+    <string name="settings_Personalise_your_app">Personalise your app</string>
+    <string name="settings_title2">Your account</string>
+    <string name="settings_Automatic">Automatic log in</string>
+    <string name="settings_personalise_services">Personalise your services</string>
+    <string name="settings_SIM_details">SIM details</string>
+    <string name="settings_home">Select a home screen service</string>
+    <string name="settings_home2">You can change the service you see ﬁrst </string>
+    <string name="settings_home3">on the home screen here. </string>
+    <string name="settings_log_in">Log in without entering your details</string>
+    <string name="settings_personalise_services2">Personalise your services by adding </string>
+    <string name="settings_personalise_services3">account names and proﬁle pictures.</string>
+    <string name="settings_Reset_your_pin">Reset your Pin</string>
+    <string name="settings_Reset_your_password">Reset your password</string>
+    <string name="settings_services">Services</string>
+    <string name="settings_services2">Activate your Voicemail and text\nalerts</string>
+    <string name="settings_add">Add-ons</string>
+    <string name="settings_diy">DIY tariff</string>
+    <string name="settings_red">Red</string>
+    <string name="settings_you_have_a_red">You have a Red</string>
+    <string name="settings_do_you">Do you want to buy Red</string>
+    <string name="settings_buy_red">Buy Red</string>
+    <string name="settings_buy_diy_plan">Confirm DIY Plan</string>
+    <string name="settings_change_diy_plan">Swap DIY Plan</string>
+    <string name="settings_bundle">Bundle</string>
+    <string name="settings_add2">Discover how to power up your\nallowances with Vodafone</string>
+    <string name="settings_diy2">Create a DIY tariff</string>
+    <string name="settings_per_month"> per month /24 months</string>
+    <string name="settings_per_month2">per month</string>
+    <string name="plus">Plus,choose one of these included extras:</string>
+    <string name="settings_plans">Plans</string>
+    <string name="settings_diy_plan">DIY plan</string>
+    <string name="settings_Reset_forgotten">If you\'re forgotten it</string>
+    <string name="settings_plans2">Explore the latest tariff offerings\nfrom Vodafone</string>
+    <string name="settings_personalise_your_app">Personalise your app</string>
+    <string name="settings_Add_photos_and_friendly_names">Add photos and friendly names</string>
+    <string name="settings_App_language">App language</string>
+    <string name="settings_App_language2">English (U.K.)</string>
+    <string name="settings_WiFi_ﬁnder">Wi-Fi ﬁnder</string>
+    <string name="settings_WiFi_ﬁnder2">Access free Wi-Fi hotspots</string>
+    <string name="settings_Privacy">Privacy</string>
+    <string name="settings_Privacy2">Manage your data permissions</string>
+    <string name="settings_Notiﬁcations">Notiﬁcations</string>
+    <string name="settings_Notiﬁcations2">Control how we communicate with you</string>
+    <string name="settings_Useful_information">Useful information</string>
+    <string name="settings_sim">SIM details</string>
+    <string name="settings_sim3">SIM</string>
+    <string name="settings_sim2">Includes your PIN and PUK</string>
+    <string name="settings_terms">Terms &#038; Conditions</string>
+    <string name="settings_version">Version</string>
+    <string name="scan_code">Scan Code</string>
+    <string name="settings_reset_pin_enter">Enter your current PIN</string>
+    <string name="settings_reset_pin_enter_your_new_pin">Enter your new PIN</string>
+    <string name="settings_reset_pin_confirm_your_new_pin">Confirm your new PIN</string>
+    <string name="settings_reset_pin_continue">Continue</string>
+    <string name="settings_reset_pin_Forgotten">Forgotten PIN?</string>
+    <string name="settings_reset_pin_Go_back">Go back</string>
+    <string name="settings_reset_pin_Forgotten_goback">Forgotten PIN?</string>
+    <string name="settings_setup_pin">Set up your PIN</string>
+    <string name="settings_setup_pin_enter_pin">Enter PIN</string>
+    <string name="settings_setup_confirm">Confirm PIN</string>
+    <string name="settings_pin_success">Your PIN has been reset</string>
+    <string name="settings_password_success">Your Password has been reset</string>
+    <string name="settings_setup_pin_confirm_tips">The PIN numbers are not identical</string>
+    <string name="settings_setup_pin_confirm_tips2">You are 4 more attempts to enter your PIN.Exceeding this number of
+         attempts will lock your account.</string>
+    <string name="settings_reset_password_tips">Your password too short</string>
+    <string name="settings_setup_pin_confirm_tips2_5">Sorry your account is num locked. you are entered your PIN more than 5 times. You need to reset your account to continue.</string>
+    <string name="settings_reset_your_account_now">Reset your account now</string>
+    <string name="settings_change_pic">Change picture</string>
+    <string name="settings_you_service_name">Your service name</string>
+    <string name="settings_PIN">PIN</string>
+    <string name="settings_Converged">Converged</string>
+    <string name="settings_broadband">Broadband</string>
+    <string name="settings_Account">Account</string>
+    <string name="settings_sim_puk_tips">There is no information to display for this
+account.</string>
+    <string name="settings_and_ipone">Andrew iPhone</string>
+    <string name="settings_for">For</string>
+    <string name="settings_title3">Title</string>
+    <string name="settings_version_introduce">Version Introduction</string>
+    <string name="settings_version_for_android">for Android</string>
+    <string name="settings_PUK_NO">PUK no</string>
+    <string name="settings_Take_a_photo">Take a photo</string>
+    <string name="settings_Choose_an_existing_photo">Choose an existing photo</string>
+    <string name="settings_Restore_default_image">Restore default image</string>
+    <string name="settings_select_service">select your home screen service</string>
+    <string name="settings_seclect_from_you">Seclect from your services below</string>
+    <string name="settings_seclect_the_service">Seclect the service that you want to see first on ths home screen</string>
+    <string name="setting_save">save</string>
+    <string name="setting_Drag_and_pinch_to">Drag and pinch to zoom the picture util you are happy with it.</string>
+    <string name="settings_Done">Done</string>
+    <string name="settings_Let_me_try_another_picture">Let me try another picture</string>
+    <string name="settings_seclect_language">Select language</string>
+    <string name="settings_set_language_sucess">You have changed the language of Application to </string>
+    <string name="setting_English">English(U.K.)</string>
+    <string name="setting_English2">English(United Kingdom)</string>
+    <string name="setting_Spanish">Español</string>
+    <string name="setting_Spanish2">Spanish</string>
+    <string name="setting_Italian">Italiano</string>
+    <string name="setting_Italian2">Italian</string>
+    <string name="setting_German">Germany</string>
+    <string name="setting_German2">German</string>
+    <string name="setting_Would_you_like_to_change_the_app_language_to">Would you like to change the app\nlanguage to </string>
+    <string name="setting_Cancel">Cancel</string>
+    <string name="settings_change_to">change to</string>
+    <string name="settings_check">Check</string>
+    <string name="setting_Access_to_free_Wi_Fi">Access to free Wi-Fi</string>
+    <string name="setting_Access_to_free_Wi_Fi2">Access to Wi-Fi is free to all Pay monthly and
+Pay as you go customers with our Big Value
+Bundle.</string>
+    <string name="setting_Enable_Wi_Fi">Enable Wi-Fi</string>
+    <string name="setting_Enable_Wi_Fi2">Switch on to access Wi-Fi</string>
+    <string name="setting_Auto_connect">Auto connect</string>
+    <string name="setting_Auto_connect2">Even when Wi-Fi is turned off</string>
+    <string name="setting_Find_your_nearest_Wi_Fi_hotspotl">Find your nearest Wi-Fi hotspot</string>
+    <string name="setting_notification_on">With this ON, you’ll receive communications through
+the app via push notifications.</string>
+    <string name="setting_notification_off">With this OFF, you’ll still get information about your
+bill, and your usage, through the app.</string>
+    <string name="setting_Sales">Sales and marketing</string>
+    <string name="setting_Sales2">notifications</string>
+    <string name="setting_Are_you_sure_you_want_to_turn_off_sales">Are you sure you want to turn off notifications?</string>
+    <string name="setting_Are_you_sure_you_want_to_turn_off_sales2">You will stop receiving push notifications </string>
+    <string name="settings_Yes_turn_off">Yes,turn off</string>
+    <string name="setting_Not_now">Not now</string>
+    <string name="back">back</string>
+    <string name="sure">sure</string>
+    <string name="preview">preview</string>
+    <string name="select_photos">select photos</string>
+    <string name="settings_save_picture_success">Your picture has been saved</string>
+    <string name="settings_save_service_name_success">Your service name has been saved</string>
+    <string name="settings_reset_your_password">Reset Your Password</string>
+    <string name="settings_send_code">Send code</string>
+    <string name="settings_confirm_password">Confirm password</string>
+    <string name="sort_by">Sort by:Relevance</string>
+    <string name="filter">Filter</string>
+    <string name="minutes1">minutes</string>
+    <string name="calls">calls</string>
+    <string name="texts">texts</string>
+    <string name="we_are">We\'ve noticed...</string>
+    <string name="you_are">You\'ve ordered</string>
+    <string name="you_are2">You\'ve swapt</string>
+    <string name="you_data">data</string>
+    <string name="you_calls">Min calls</string>
+    <string name="you_texts">texts</string>
+    <string name="you_cover">cover for</string>
+    <string name="you_but">...but you already have</string>
+    <string name="you_can">Do you want to confirm DIY tariff?</string>
+    <string name="you_can2">Do you want to swap DIY tariff?</string>
+    <string name="you_swap">Swap DIY tariff</string>
+    <string name="you_confirm">Confirm DIY tariff</string>
+    <string name="want_to">Do you want to Log out?</string>
+    <string name="unlimited">Unlimited</string>
+    <string name="uk_data">data</string>
+    <string name="uk_text">texts</string>
+    <string name="uk_calls">calls</string>
+    <string name="swap_success">You\'ve successfully swap DIY plan,it will take effect in next month</string>
+    <string name="confirm_success">You\'ve bought successfully.This could take up to 24 hours to update on your account</string>
+    <string name="want_to_log_out">You will not be able to check the balance \n or your data allowance.</string>
+    <string name="you_can_only">You can only have one of these DIY traiff at the same time.Do you want to swap DIY traiff? If so ,the old DIY plan will be replaced at next month.</string>
+
+    <string-array name="offer_array">
+        <item>Sort by:Relevance</item>
+        <item>Sort by:Relevance</item>
+        <item>Sort by:Relevance</item>
+        <item>Sort by:Relevance</item>
+        <item>Sort by:Relevance</item>
+    </string-array>
+    <string-array name="person_array1">
+        <item>Title</item>
+        <item>First Name</item>
+        <item>Last Name</item>
+        <item>Contact Phone</item>
+        <item>Email</item>
+        <item>Customer Language</item>
+        <item>Activation Time</item>
+        <item>Network Type</item>
+        <item>Payment Type</item>
+        <item>Bill Cycle</item>
+        <item>Postal Code</item>
+        <item>Exact Address</item>
+        <item>City</item>
+        <item>State</item>
+    </string-array>
+    <string-array name="person_array2">
+        <item>Mr</item>
+        <item>Cindy</item>
+        <item>Sasha</item>
+        <item>15895993343</item>
+        <item>Cindy123@gmail.com</item>
+        <item>English</item>
+        <item>06-01-2016</item>
+        <item>4G TD-LTE</item>
+        <item>Pay as you go</item>
+        <item>Per month</item>
+        <item>770011</item>
+        <item>Houston Collage center...</item>
+        <item>Houston</item>
+        <item>TX Texas</item>
+    </string-array>
+
+    <!-- 账单 -->
+    <string name="current_bills">Current spend and bills</string>
+    <string name="pay_month">Pay monthly</string>
+    <string name="pay_as_you_go">Pay as you go</string>
+    <string name="all_current_spend">All current spend</string>
+    <string name="chargeable">Chargeable</string>
+    <string name="non_chargeable">Non chargeable</string>
+    <string name="plan_spends">Includes <b>€5.00</b> out of plan spend</string>
+    <string name="last_update">Last updated<b><tt> 19st Sept 2016</tt></b></string>
+    <string name="tv_paid">Billed on <b><tt>5 April 2016</tt></b>\nPaid on <b><tt>7 April 2016</tt></b> by Direct Debit</string>
+    <string name="tv_paid_current">Your bill date will be <b><tt>5 May 2016</tt></b>\nPayment date <b><tt>7 May 2016</tt></b></string>
+    <string name="tv_VAT"><b><tt><font color='#9c2aa0'>€22.98</font></tt></b>(inc.€9.66 VAT)</string>
+    <string name="tv_include">Includes <font color='#9c2aa0'>€5.00</font> out of plan spend</string>
+    <string name="order_by_date">Order by - <b><tt>Date</tt></b></string>
+
+    <!-- priducts services -->
+    <string name="services_title">Select a Service</string>
+    <string name="services_context">Your products and services</string>
+    <string name="plan">Plan</string>
+    <string name="cost">Cost(monthly)</string>
+    <string name="cost2">Cost</string>
+    <string name="Free_for_30days">Free for 30 days</string>
+    <string name="duration">Duration</string>
+    <string name="address">Address</string>
+    <string name="filter_plans">Filter Plans</string>
+    <string name="select_monthly_cost">Select monthly cost</string>
+    <string name="select_monthly_cost2">Select monthly texts</string>
+    <string name="select_monthly_data">Select monthly data</string>
+    <string name="select_monthly_call">Select monthly calls</string>
+	<!--充值  -->
+    <string name="recharge_success">Your payment was successful</string>
+    <string name="recharge_failure">Your payment was failure</string>
+     <!-- 历史套餐 -->
+    <string name="my_orders">My orders</string>
+    <string name="subscribed_offerings">Subscribed Offerings</string>
+    <string name="booking">Subscribed History</string>
+    
+    <string name="want_to_recharge">Do you want to recharge?</string>
+    <string name="title_activity_mshare">MShareActivity</string>
+    <string name="photo_post_failed">获取拍照权限失败</string>
+    <string name="photo_post_success">获取拍照权限成功</string>
+</resources>

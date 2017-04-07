@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/half_dack_transparency"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/data_add_on"
+        layout="@layout/second_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/data_add_on"
+        android:background="@color/support_gray_more"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/main_add_data_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1"
+            android:text="@string/add_text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_one" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/one_gb"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_toLeftOf="@+id/two_gb"
+                android:background="@drawable/gray_cirle"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/data_name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="500MB"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/data_money1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="€3.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_one" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/two_gb"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/red_cirle"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/data_name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1GB"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/data_money2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="€5.00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_one" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/five_gb"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@+id/two_gb"
+                android:background="@drawable/gray_cirle"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/data_name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2GB"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/data_money3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="€8.00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_one" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/data_tab"
+                android:layout_width="128dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="80dp"
+                android:src="@drawable/blue_cirle_tab" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/starbucks_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" 
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="€2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_text_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Starbucks coupon"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_three" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bug_data"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@color/red_dack"
+            android:text="Buy a 1GB data add-on"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_two" />
+
+        <Button
+            android:id="@+id/no_thanks"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:background="@color/gray"
+            android:text="@string/no_thanks"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_two" />
+
+        <Button
+            android:id="@+id/browse_all_extras"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:background="@color/gray"
+            android:text="@string/browse_all_extras"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_two"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

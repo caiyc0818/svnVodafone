@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp" >
+
+    <TextView
+        android:id="@+id/current_spend_text_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="55dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@+id/current_spend_type_image"
+        android:layout_alignParentBottom="true"
+        android:gravity="right|center_vertical"
+        android:text="Data roaming while abroad"
+        android:textColor="@color/support_gray_more"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/current_spend_type_image"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/purple_line" />
+
+    <ImageView
+        android:id="@+id/current_spend_type_image"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/current_spend_abroad" />
+
+    <TextView
+        android:id="@+id/current_spend_text_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="40dp"
+        android:layout_toRightOf="@+id/current_spend_type_image"
+        android:gravity="left|center_vertical"
+        android:text="€5.00"
+        android:textColor="@color/support_gray_more"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

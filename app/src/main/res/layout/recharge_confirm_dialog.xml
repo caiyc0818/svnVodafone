@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aa000000"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/tv_center"
+        layout="@layout/second_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_center"
+        android:background="@color/support_gray_more"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/tv_log_out_yes"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="35dp"
+            android:background="#e60000"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/yes"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_log_out_no"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_log_out_yes"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#999999"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/no"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

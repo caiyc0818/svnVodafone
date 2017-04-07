@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    xmlns:attrstest="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:configChanges="keyboardHidden"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/edittext1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:configChanges="keyboardHidden" />
+
+        <EditText
+            android:id="@+id/edittext2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:configChanges="keyboardHidden" />
+
+        <EditText
+            android:id="@+id/edittext3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:configChanges="keyboardHidden" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="clear" />
+
+    <Button
+        android:id="@+id/Button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="request" />
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="360dp"
+        android:layout_gravity="center_horizontal">
+
+        <com.huawei.vodafone.ui.myview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="72dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/alice"
+            android:visibility="gone"
+            attrstest:border_color="@color/white"
+            attrstest:border_width="0dp" />
+
+        <com.huawei.vodafone.ui.myview.CircleImageView
+            android:id="@+id/user_two"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="53dp"
+            android:layout_marginTop="7.5dp"
+            android:src="@drawable/head_img"
+            attrstest:border_color="@color/white"
+            attrstest:border_width="1dp" />
+
+        <LinearLayout
+            android:id="@+id/image_gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.huawei.vodafone.ui.myview.CircleImageView
+                android:id="@+id/user_portrait"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:src="@drawable/alice"
+                attrstest:border_color="@color/white"
+                attrstest:border_width="0dp" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="Alice&apos;s"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/phone"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/for_tip_three"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="175dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bill_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/credit_remain"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/balance_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="€0.00"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="30dp"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/help_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/message_num_tv"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_margin="2dp"
+                android:background="@drawable/white_point"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/red_dack"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/chat_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24/7"
+                    android:textColor="@color/red_dack"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-4dp"
+                    android:text="@string/support"
+                    android:textColor="@color/red_dack"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/prog_frame"
+            android:layout_width="172dp"
+            android:layout_height="208.2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="83dp">
+
+            <ImageView
+                android:id="@+id/add_circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@drawable/add_circle" />
+
+            <TextView
+                android:id="@+id/add_plus"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="17dp"
+                android:background="@drawable/add_plus" />
+
+            <com.huawei.vodafone.ui.myview.RoundProgressBar
+                android:id="@+id/id_flow_progreessbar"
+                android:layout_width="172dp"
+                android:layout_height="172dp"
+                android:layout_marginTop="35dp"
+                android_custom:endImage="@drawable/triangle_point"
+                android_custom:max="100"
+                android_custom:roundColor="@color/half_white"
+                android_custom:roundColorth="@color/black"
+                android_custom:roundProgressColor="@color/white"
+                android_custom:roundWidth="7dp"
+                android_custom:startAngle="-90"
+                android_custom:startImage="@drawable/black_point"
+                android_custom:textColor="@color/white"
+                android_custom:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="58.7dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/which_flow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Data"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/surplus_flow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="1dp"
+                    android:lineSpacingMultiplier="0.1"
+                    android:text="0.0"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/all_flow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="of 0GB left"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/add_gb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="260dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/black_point_bg"
+            android:gravity="center"
+            android:text="@string/gb"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/add_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="188dp"
+            android:background="@drawable/black_point_bg"
+            android:gravity="center"
+            android:text="@string/more"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/speak_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="104dp"
+            android:layout_marginLeft="34dp"
+            android:src="@drawable/speak_select2" />
+
+        <ImageView
+            android:id="@+id/call_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="46dp"
+            android:layout_marginLeft="60dp"
+            android:src="@drawable/call_select" />
+
+        <ImageView
+            android:id="@+id/sms_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/prog_frame"
+            android:layout_marginBottom="11dp"
+            android:layout_marginLeft="114dp"
+            android:src="@drawable/sms_select" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Textview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

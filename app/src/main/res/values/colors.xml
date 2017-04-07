@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparency">#00000000</color>
+    <color name="half_transparency">#33000000</color>
+    <color name="half_more_transparency">#aa000000</color>
+    <color name="half_dack_transparency">#ee000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="half_white">#33ffffff</color>
+    <color name="black">#000000</color>
+    <color name="main_title">#5e2750</color>
+    <color name="red_dack">#E60000</color>
+    <color name="title_bg">#0068B6</color>
+    <color name="bg_delete">#CC0001</color>
+    <color name="bg_archive">#9B2AA0</color>
+    <color name="bg_mark">#5E274F</color>
+    <color name="tab_bg">#F5F5F5</color>
+    <color name="view_bg">#F0EEEF</color>
+    <color name="tab_text_select">#FFA800</color>
+    <color name="text_normal">#8D8D8D</color>
+    <color name="slide_bg">#32323A</color>
+    <color name="main_title_bg">#E43524</color>
+    <color name="blue_dark">#466594</color>
+    <color name="blue_dark_two">#027e93</color>
+
+    <!-- qrcode -->
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color>
+    <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="lightgreen">#99CC33</color>
+    <color name="nodata">#bcbcbc</color>
+    <color name="green">#008000</color>
+    <!-- qrcode -->
+
+
+    <!-- login -->
+    <color name="login_btn">#4A4D4E</color>
+    <color name="login_btn_text">#666666</color>
+    <color name="forgotton_pwd_btn">#999999</color>
+    <color name="register_btn">#C40C0C</color>
+    <color name="line">#D9D9D9</color>
+    <color name="argee_text">#393939</color>
+    <color name="gray">#999999</color>
+    <color name="support_gray_more">#333333</color>
+    <color name="support_gray_little">#666666</color>
+    <color name="support_gray_more_little">#c2c2c2</color>
+    <color name="support_gray">#444444</color>
+    <color name="support_gray_99">#999999</color>
+    <color name="support_line">#cccccc</color>
+    <color name="support_red">#e60000</color>
+    <color name="support_bg">#f4f4f4</color>
+    <color name="support_disable">#c9c9c9</color>
+    <color name="gray_border">#E1E1E1</color>
+    <color name="gray_white">#FaFaFa</color>
+    <color name="gray_white_two">#afafaf</color>
+    <color name="gray_search">#F4F4F4</color>
+     <color name="gray_line">#dbdbdb</color>
+     
+     <!--bills-->
+    <color name="lin_top">#9c2aa0</color>
+    <color name="lin_bottom">#2bb4c8</color>
+    <color name="gray_bg">#3d3d3d</color>
+     <!-- products serices -->
+     <color name="services_title">#5E2750</color>
+     <color name="services_context">#FCFCFC</color>
+  
+    <color name="gray_bg_two">#ebebeb</color>
+    <color name="focusedtrue">#DBDBDB</color>
+    <color name="presstrue">#EAEAEA</color>
+    <color name="normalback">#FFFFFF</color>
+    <color name="hintcolor">#707070</color>
+</resources>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bills_bg_img" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/second_title_bar" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             android:fillViewport="true"
+            android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/layout_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/image"
+                    android:background="@color/gray_bg_two"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:id="@+id/chat_what_rl "
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/shape_faqs_et_bg"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="13dp"
+                            android:paddingRight="13dp" >
+
+                            <TextView
+                                android:id="@+id/chat_what_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/sort_by"
+                                android:textColor="@color/support_gray_more"
+                                android:textSize="@dimen/text_size_one" >
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/chat_what_iv"
+                                android:layout_width="20dp"
+                                android:layout_height="12dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/chat_to_us_arrow" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/Filter"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_faqs_et_bg"
+                            android:gravity="center"
+                            android:text="@string/filter"
+                            android:textColor="@color/support_gray_more"
+                            android:textSize="@dimen/text_size_one" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal" >
+
+                        <com.huawei.vodafone.ui.myview.MyListview
+                            android:id="@+id/chat_what_lv"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:layout_weight="2"
+                            android:background="@drawable/shape_faqs_et_bg"
+                            android:divider="#cccccc"
+                            android:dividerHeight="0.5dp"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:listSelector="@color/transparency"
+                            android:overScrollMode="never"
+                            android:scrollbars="none" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:textColor="@color/support_gray_more"
+                            android:textSize="@dimen/text_size_one" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <com.huawei.vodafone.ui.myview.MyListview
+                        android:id="@+id/plans_listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:divider="#ffffff"
+                        android:dividerHeight="0dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:listSelector="@color/transparency"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#CC000000"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/settings_you_have_a_red"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/text"
+                android:text="5GB"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/text1"
+                android:text="@string/settings_bundle"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/go_down"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/plan_show" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_plans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/text"
+                android:layout_below="@+id/text"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/uk_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/banner_icon"
+                    android:text="5GB"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/uk_date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/uk_date"
+                    android:text="UK data"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/un"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/uk_date"
+                    android:layout_marginRight="5dp"
+                    android:drawableLeft="@drawable/banner_icon"
+                    android:text="Unlimited"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/un2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/uk_date"
+                    android:layout_toRightOf="@+id/un"
+                    android:text="@string/minutes1"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/un22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/un2"
+                    android:layout_marginRight="5dp"
+                    android:drawableLeft="@drawable/banner_icon"
+                    android:text="Unlimited"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/un222"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/un2"
+                    android:layout_toRightOf="@+id/un22"
+                    android:text="@string/texts"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/un3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/un22"
+                    android:layout_marginBottom="10dp"
+                    android:drawableLeft="@drawable/banner_icon"
+                    android:text="@string/settings_per_month"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

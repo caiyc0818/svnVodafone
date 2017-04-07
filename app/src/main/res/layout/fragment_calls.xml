@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text="Current Usage"
+        android:textColor="#642750"
+        android:textSize="26sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/title_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="in plan-500Min/500Min"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp" >
+
+            <ProgressBar
+                android:id="@+id/progress1"
+                style="@style/ProgressBar_Mini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progress="100"
+                android:progressDrawable="@drawable/layer_progress" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="100%"
+                android:gravity="right"
+                android:textColor="@color/black" 
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_call2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add on-350Min/500Min"
+            android:textColor="@color/black" 
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp" >
+
+            <ProgressBar
+                
+                android:id="@+id/progress2"
+                style="@style/ProgressBar_Mini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progress="70" 
+                android:progressDrawable="@drawable/layer_progress"/>
+
+            <TextView
+                   android:id="@+id/text2"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="70%"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out of plan-0Min"
+            android:textColor="@color/black" 
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp" >
+
+            <ProgressBar
+                android:id="@+id/progress3"
+                style="@style/ProgressBar_Mini"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:progress="0"
+                android:progressDrawable="@drawable/layer_progress" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="100%"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:visibility="invisible"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:text="Previous Usage"
+        android:textColor="#642750"
+        android:textSize="26sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_top1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calls made for the current month"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_top2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration of outgoing calls in hours,mins,secs."
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_top3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total call time 102:01"
+            android:textColor="#646464"
+            android:textSize="12sp" />
+
+                <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <RelativeLayout 
+                android:layout_width="35dp"
+                android:layout_height="150dp">
+                <TextView 
+                    android:id="@+id/tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:layout_centerHorizontal="true"
+                    android:paddingTop="10dp"
+                    android:textSize="12sp"
+                    android:layout_alignParentTop="true"/>
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_1"
+                    android:paddingTop="5dp"
+                    android:textSize="12sp"
+                    android:layout_centerHorizontal="true"
+                    android:text="(Min)"/>
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="12sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="10dp"/>
+            </RelativeLayout>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+</LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_bottom1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calls made for the past few months"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_bottom2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration of outgoing calls in hours,mins,secs."
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_bottom3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total call time 32:01:15"
+            android:textColor="#646464"
+            android:textSize="12sp" />
+        
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            
+            <RelativeLayout 
+                android:layout_width="30dp"
+                android:layout_height="150dp">
+                <TextView 
+                    android:id="@+id/tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:paddingTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="12sp"
+                    android:layout_alignParentTop="true"/>
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_2"
+                    android:paddingTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="12sp"
+                    android:text="(H)"/>
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="12sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="10dp"/>
+            </RelativeLayout>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+</LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

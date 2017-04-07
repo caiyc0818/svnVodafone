@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="11dp" >
+
+        <ImageView
+            android:id="@+id/title"
+            android:layout_width="51.5dp"
+            android:layout_height="53dp"
+            android:src="@drawable/support_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/title"
+            android:text="@string/live_chat"
+            android:textColor="@color/support_gray_more"
+            android:textSize="@dimen/title_text_size" />
+
+        <ImageView
+            android:id="@+id/chat_to_us_minimize_iv"
+            android:layout_width="20dp"
+            android:layout_height="2dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/close_iv"
+            android:src="@drawable/chat_to_us_minimize" />
+
+        <ImageView
+            android:id="@+id/close_iv"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/support_close" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@id/top_rl"
+        android:background="@drawable/support_top_gradient_bg" >
+    </View>
+
+    <RelativeLayout
+        android:id="@+id/send_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="5dp" >
+
+        <ImageView
+            android:id="@+id/send_iv"
+            android:layout_width="47dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/chat_to_us_send" >
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/search_rl"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/send_iv"
+            android:background="@drawable/shape_faqs_et_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:id="@+id/photo_iv"
+                android:layout_width="21.7dp"
+                android:layout_height="19.1dp"
+                android:background="@drawable/chat_to_us_photo" >
+            </ImageView>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="5.5dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginTop="5.5dp"
+                android:background="@color/support_line" >
+            </View>
+
+            <EditText
+                android:id="@+id/send_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toRightOf="@id/photo_iv"
+                android:background="@color/white"
+                android:hint="@string/send_et_hint"
+                android:textColor="@color/support_gray_more"
+                android:textSize="@dimen/text_size_three" >
+            </EditText>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.huawei.vodafone.ui.myview.msglistview.MsgListView
+        android:id="@+id/msg_listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/send_rl"
+        android:layout_below="@id/top_view"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="21dp"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:transcriptMode="normal" />
+
+</RelativeLayout>

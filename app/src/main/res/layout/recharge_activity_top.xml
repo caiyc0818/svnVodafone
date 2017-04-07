@@ -1,0 +1,19 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        layout="@layout/second_title_bar"
+        android:id="@+id/second_title"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300dp"
+        android:gravity="center"
+        android:padding="50dp"
+        android:text="@string/scanning_hint"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>

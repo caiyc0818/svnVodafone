@@ -1,0 +1,123 @@
+<resources>
+    <style name="button_allgrade_content">
+        <item name="android:layout_margin">1dip</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="Theme_Umeng_Push_Splash" parent="android:Theme.NoTitleBar.Fullscreen">
+        <item name="android:windowBackground">@drawable/umeng_push_default_splash_bg</item>
+    </style>
+    <!-- Dialog对话框 -->
+    <style name="MyLoadDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:gravity">bottom</item>
+    </style>
+    <!-- ProgressBar -->
+    <style name="loading_small" parent="@android:style/Widget.ProgressBar.Small">
+        <item name="android:indeterminateDrawable">@drawable/loading2</item>
+        <item name="android:layout_width">25dip</item>
+        <item name="android:layout_height">25dip</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- 顶部弹出框 -->
+    <style name="pop_dialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="AutoCompleteStyle" parent="@android:style/Widget.AutoCompleteTextView">
+        <item name="android:popupBackground">@drawable/shape_faqs_et_bg</item>
+        <item name="android:dropDownVerticalOffset">0dip</item>
+    </style>
+
+    <style name="Dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="Dialog2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="pw_anim_style">
+
+        <!-- 设置pw显示时的动画 -->
+        <item name="android:windowEnterAnimation">@anim/activity_up_enter</item>
+        <!-- 设置pw隐藏时的动画 -->
+        <item name="android:windowExitAnimation">@anim/activity_down_exit</item>
+    </style>
+
+    <style name="anim_popup_dir">
+        <item name="android:windowEnterAnimation">@anim/slide_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_out</item>
+    </style>
+
+    <style name="myDialog1" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowEnterAnimation">@anim/activity_up_enter</item>
+        <item name="android:windowExitAnimation">@anim/activity_down_exit</item>
+    </style>
+    <style name="myDialog2" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:windowEnterAnimation">@anim/activity_up_enter</item>
+        <item name="android:windowExitAnimation">@anim/activity_down_exit</item>
+    </style>
+    <style name="Widget.SeekBar.Normal" parent="@android:style/Widget.SeekBar">
+        <item name="android:maxHeight">6.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/shape_fiter_plan_bg</item>
+        <item name="android:minHeight">6.0dip</item>
+        <item name="android:thumb">@drawable/plans_filter_thumb</item>
+        <item name="android:thumbOffset">0dip</item>
+    </style>
+
+    <style name="ProgressBar_Mini" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">8dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/progressbar_mini</item>
+    </style>
+</resources>

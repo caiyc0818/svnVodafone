@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bills_bg_img"
+    android:orientation="vertical" >
+
+    <include layout="@layout/second_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:id="@+id/sign_in_credits"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/my_point"
+            android:fillViewport="true"
+            android:scrollbars="@null" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/card_discount_vp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/title"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/half_more_transparency"
+                        android:padding="5dp" />
+
+                    <LinearLayout
+                        android:id="@+id/card_discount_dots"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dip"
+                        android:layout_below="@+id/card_discount_vp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/half_more_transparency"
+                        android:gravity="center"
+                        android:orientation="horizontal" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/layout_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_bg_two"
+                    android:orientation="vertical" >
+
+                    <com.huawei.vodafone.ui.myview.MyListview
+                        android:id="@+id/credits_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:divider="@null" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/my_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="My points"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/points_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/integral_icon"
+                android:drawablePadding="10dp"
+                android:gravity="right"
+                android:padding="10dp"
+                android:text="7652 points"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

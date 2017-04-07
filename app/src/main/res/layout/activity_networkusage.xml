@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bills_bg_img"
+    android:orientation="vertical">
+
+    <include layout="@layout/second_title_bar" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/half_more_transparency"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.huawei.vodafone.ui.myview.CircleImageView
+                    android:id="@+id/img_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/alice"
+                    app:border_color="@color/white"
+                    app:border_width="0dp" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="07783 947975"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@drawable/bills_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:text="Here is a detailed view of all your data usage.This include the usage of data and calls.Button at the bottom of the page can make you to see your current spend and bills quickly."
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_line"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ebebeb"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:id="@+id/lin_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#dbdbdb"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lin_one"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/tv_all"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:text="Data"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_non"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="Calls"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="#ebebeb"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/img_data"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/matrix_img"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="matrix" />
+
+                    <ImageView
+                        android:id="@+id/img_calls"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/matrix_img"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="matrix"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></FrameLayout>
+
+                <TextView
+                    android:id="@+id/tv_toitemised"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#e60101"
+                    android:gravity="center"
+                    android:text="see David&apos;s itemised spend"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical" >
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="270dp"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:text="@string/setting_Are_you_sure_you_want_to_turn_off_sales"
+        android:textColor="@color/white"
+        android:textSize="21sp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:gravity="center"
+        android:textSize="14sp"
+       android:text="@string/setting_Are_you_sure_you_want_to_turn_off_sales2"
+        android:textColor="@color/white"/>
+    
+
+    <Button
+        android:id="@+id/turn_off"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/settings_resetpin_back_red"
+        android:textSize="16sp"
+        android:text="@string/settings_Yes_turn_off"
+        android:textColor="@color/white" />
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:layout_marginTop="20dip"
+        android:background="@drawable/settings_person_btn_selected_status"
+        android:text="@string/setting_Not_now"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+   </LinearLayout> 
+
+</LinearLayout>

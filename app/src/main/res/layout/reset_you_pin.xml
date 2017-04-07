@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bills_bg_img" />
+
+        <include
+            android:id="@+id/title"
+            layout="@layout/second_title_bar" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/settings_resetpin"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp" >
+
+            <TextView
+                android:id="@+id/reset_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/settings_reset_pin_enter"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <EditText
+                    android:id="@+id/edit1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/settings_reset_pin_edit"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:password="true" />
+
+                <EditText
+                    android:id="@+id/edit2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/settings_reset_pin_edit"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:password="true" />
+
+                <EditText
+                    android:id="@+id/edit3"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/settings_reset_pin_edit"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:password="true" />
+
+                <EditText
+                    android:id="@+id/edit4"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/settings_reset_pin_edit"
+                    android:gravity="center"
+                    android:inputType="numberPassword"
+                    android:maxLength="1"
+                    android:password="true" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/pin_con"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/settings_resetpin_back1"
+                android:gravity="center"
+                android:text="@string/settings_reset_pin_continue" />
+
+            <TextView
+                android:id="@+id/pin_reset"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/settings_resetpin_back2"
+                android:gravity="center"
+                android:text="@string/settings_reset_pin_Forgotten" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

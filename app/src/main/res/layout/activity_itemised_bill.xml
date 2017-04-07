@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bills_bg_img"
+    android:orientation="vertical" >
+
+    <include layout="@layout/second_title_bar" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/half_more_transparency"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="Current spend preiod 6 - 14 April 2016"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp" >
+
+                    <ImageView
+                        android:id="@+id/img_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_left"
+                        android:visibility="gone" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true" >
+
+                            <com.huawei.vodafone.ui.myview.NewViewPager
+                                android:id="@+id/vp"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_gravity="center"
+                                android:clipChildren="false" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/img_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/img_right"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:text="David&apos;s phone"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="07783 947975"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2px"
+                    android:background="@drawable/bills_line"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="Billed on 5 May 2016"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:text="Payment date 7 May 2016"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_line" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ebebeb"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" >
+
+                <LinearLayout
+                    android:id="@+id/lin_current_spend"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="10px"
+                        android:layout_height="match_parent"
+                        android:background="#e60000" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#000000"
+                        android:paddingRight="10dp" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingLeft="15dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="1dp"
+                                android:text="Total spend"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="1dp"
+                                android:text="€53.00"
+                                android:textColor="@color/white"
+                                android:textSize="30sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="1dp"
+                                android:text="Includes €5.00 out of plan spend"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ebebeb"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/itemised_bg"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        android:text="Filter your itemised bill"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rgStorageWay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rd_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@drawable/img_date"
+                            android:gravity="center"
+                            android:text="Data"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/rd_calls"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@drawable/call_selector"
+                            android:gravity="center"
+                            android:text="Calls"
+                            android:textSize="18sp" />
+
+                        <RadioButton
+                            android:id="@+id/rd_txts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawablePadding="8dp"
+                            android:drawableTop="@drawable/img_txts"
+                            android:gravity="center"
+                            android:text="Texts"
+                            android:textSize="18sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#dbdbdb"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/lin_one"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_all"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:text="All"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_chargeable"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="@string/chargeable"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_non"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:clickable="false"
+                            android:gravity="center"
+                            android:text="@string/non_chargeable"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp" >
+
+                    <ImageView
+                        android:id="@+id/iv_nav_indicator"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/matrix_img"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="matrix" />
+
+                    <ImageView
+                        android:id="@+id/img_chargeable"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/matrix_img"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="matrix"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/img_non"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/matrix_img"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="matrix"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/tv_order_bg"
+                        android:drawableRight="@drawable/tv_down"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="@string/order_by_date"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp" >
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="3px"
+                            android:background="@drawable/bg_line" />
+
+                        <com.huawei.vodafone.ui.myview.MyListview
+                            android:id="@+id/listview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:cacheColorHint="#00000000"
+                            android:divider="@drawable/bg_line"
+                            android:dividerHeight="3px"
+                            android:fadingEdge="none"
+                            android:listSelector="@color/transparency"
+                            android:overScrollMode="never" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="3px"
+                            android:background="@drawable/bg_line" />
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/foot_layout"
+                        layout="@layout/listfooter_more" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bills_bg_img"
+    android:orientation="vertical" >
+
+    <include layout="@layout/second_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/half_more_transparency"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:id="@+id/text_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:text="6 March - 5 April 2016"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:text="€22.98"
+                        android:textColor="@color/white"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/text_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(Includes €9.66 VAT)"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:background="@drawable/bills_line"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/text_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="@string/tv_paid"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_line" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ebebeb"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="20dp" >
+
+                <LinearLayout
+                    android:id="@+id/lin_lt"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:id="@+id/view_line"
+                        android:layout_width="12px"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/detail_line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <ImageView
+                            android:id="@+id/head_img"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/david_ic" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/head_img"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp" >
+
+                            <TextView
+                                android:id="@+id/tv_one"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="David&apos;s phone"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tv_two"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="07785 460399"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_three"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tv_VAT"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tv_four"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/tv_include"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                        <CheckBox
+                            android:id="@+id/img_arrows"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:button="@drawable/arrows_down"
+                            android:checked="true"
+                            android:clickable="false" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#ebebeb" />
+
+                <LinearLayout
+                    android:id="@+id/lin_spend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="In plan"
+                            android:textColor="@color/black" 
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/img_one"
+                            android:paddingRight="10dp"
+                            android:text="€17.98"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" 
+                            android:textSize="14sp"/>
+
+                        <ImageView
+                            android:id="@+id/img_one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/out_down_img"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:background="@drawable/bg_line" />
+
+                    <RelativeLayout
+                        android:id="@+id/rel_out"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            android:id="@+id/tv_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Out of plan"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/check_out"
+                            android:paddingRight="10dp"
+                            android:text="calls €10.5"
+                            android:textColor="#9c2aa0"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <CheckBox
+                            android:id="@+id/check_out"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:button="@drawable/out_down_img"
+                            android:checked="true"
+                            android:clickable="false" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:background="@drawable/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/lin_out"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <RelativeLayout
+                            android:id="@+id/rel_calls"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="#f7f7f7"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Calls"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/img_calls"
+                                android:paddingRight="10dp"
+                                android:text="€10.5"
+                                android:textColor="#9c2aa0"
+                                android:textStyle="bold"
+                                android:textSize="14sp" />
+
+                            <CheckBox
+                                android:id="@+id/img_calls"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:button="@drawable/out_right_img" 
+                                android:textSize="14sp"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="@drawable/bg_line" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="#f7f7f7"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Texts"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/img_txts"
+                                android:paddingRight="10dp"
+                                android:text="€0.00"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" 
+                                android:textSize="14sp"/>
+
+                            <CheckBox
+                                android:id="@+id/img_txts"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:button="@drawable/out_right_img"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="@drawable/bg_line" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="#f7f7f7"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="Data"
+                                android:textColor="@color/black" 
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/img_Date"
+                                android:paddingRight="10dp"
+                                android:text="€0.00"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" 
+                                android:textSize="14sp"/>
+
+                            <CheckBox
+                                android:id="@+id/img_Date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:button="@drawable/out_right_img"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="@drawable/bg_line" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Extras"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/img_three"
+                            android:paddingRight="10dp"
+                            android:text="€0"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/img_three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/out_down_img" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:background="@drawable/bg_line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Discounts"
+                            android:textColor="@color/black" 
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/img_four"
+                            android:paddingRight="10dp"
+                            android:text="€5.5"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" 
+                            android:textSize="14sp"/>
+
+                        <ImageView
+                            android:id="@+id/img_four"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/out_down_img" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:background="@drawable/bg_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:gravity="center"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp" >
+
+                        <TextView
+                            android:id="@+id/tv_see"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:background="#717171"
+                            android:gravity="center"
+                            android:text="See itemised spend"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ebebeb"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <com.huawei.vodafone.ui.myview.MyListview
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ebebeb"
+                    android:cacheColorHint="#00000000"
+                    android:divider="@color/transparency"
+                    android:dividerHeight="10dp"
+                    android:fadingEdge="none"
+                    android:listSelector="@color/transparency"
+                    android:overScrollMode="never"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ebebeb"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="10dp" >
+
+                <LinearLayout
+                    android:id="@+id/lin_lt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:id="@+id/view_line1"
+                        android:layout_width="12px"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue_line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <ImageView
+                            android:id="@+id/head_img1"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/img_normal" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/head_img1"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp" >
+
+                            <TextView
+                                android:id="@+id/tv_three1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Account extras"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_four1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="€20.00"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#ebebeb" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="12px"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/blue_line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp" >
+
+                        <ImageView
+                            android:id="@+id/head_img2"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/img_normal" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/head_img2"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Account Discounts"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="-€5.00"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

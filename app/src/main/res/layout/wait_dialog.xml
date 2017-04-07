@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_transparency"
+    android:id="@+id/wait_bg">
+
+    <ImageView
+        android:id="@+id/wait_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pic_home" 
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#22101403"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/wait_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wait..."
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_marginTop="15dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:indeterminateDrawable="@drawable/f_image_progress_popbox" />
+    </LinearLayout>
+
+</FrameLayout>

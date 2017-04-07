@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+     >
+<LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+     android:layout_alignParentLeft="true"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="National Data"
+        android:gravity="center_vertical"
+        android:textColor="#707070"
+        android:textSize="14sp" />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="National Call"
+        android:gravity="center_vertical"
+        android:textColor="#707070"
+        android:textSize="14sp" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="30dp"
+          android:gravity="center_vertical"
+          android:text="National Texts"
+          android:textColor="#707070"
+          android:textSize="14sp" />
+
+       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="International Call"
+        android:gravity="center_vertical"
+         android:textColor="#707070"
+        android:textSize="14sp" />
+       
+</LinearLayout>
+    
+<LinearLayout 
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+    
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="€0.1 per MB"
+        android:gravity="center_vertical"
+        android:textColor="#707070"
+        android:textSize="14sp" />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="€0.2 per Mins"
+        android:gravity="center_vertical"
+         android:textColor="#707070"
+        android:textSize="14sp" />
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="€0.1 per Item"
+        android:textColor="#707070"
+        android:textSize="14sp" />
+       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="€0.5 per Mins"
+        android:gravity="center_vertical"
+        android:textColor="#707070"
+        android:textSize="14sp" />
+</LinearLayout>
+</RelativeLayout>

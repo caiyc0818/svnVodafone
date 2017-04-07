@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attrstest="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bills_bg_img"
+    android:orientation="vertical" >
+
+    <include layout="@layout/second_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/half_more_transparency"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/go_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="18dp"
+                            android:background="@drawable/settings_go_left"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <com.huawei.vodafone.ui.myview.CircleImageView
+                                android:id="@+id/image3"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="14dp"
+                                android:background="@drawable/alice"
+                                android:src="@drawable/settings_resetpin"
+                                android:visibility="gone"
+                                attrstest:border_color="@color/white"
+                                attrstest:border_width="0dp" />
+
+                            <com.huawei.vodafone.ui.myview.CircleImageView
+                                android:id="@+id/image2"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="7dp"
+                                android:background="@drawable/alice"
+                                android:src="@drawable/settings_resetpin"
+                                android:visibility="gone"
+                                attrstest:border_color="@color/white"
+                                attrstest:border_width="0dp" />
+
+                            <com.huawei.vodafone.ui.myview.CircleImageView
+                                android:id="@+id/image1"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:src="@drawable/bg_tourer"
+                                attrstest:border_color="@color/white"
+                                attrstest:border_width="0dp" />
+                        </FrameLayout>
+
+                        <ImageView
+                            android:id="@+id/go_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="18dp"
+                            android:background="@drawable/settings_go_right11"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="Andrew&apos;s phone"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="07402 6272812"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/chang_picture"
+                        android:layout_width="120dp"
+                        android:layout_height="38dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/settings_textview_white"
+                        android:gravity="center"
+                        android:text="@string/settings_change_pic"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/layout_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/gray_bg_two"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/settings_person_service_expanded"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/settings_you_service_name"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_for"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="07402 627812"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="12dp
+                    "
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/settings_textview_white2" >
+
+                        <EditText
+                            android:id="@+id/edit_name"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLength="16"
+                            android:singleLine="true"
+                            android:text="Alice&apos;s phone"
+                            android:textColor="@color/black"
+                            android:textCursorDrawable="@null"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/text_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:singleLine="true"
+                            android:text="6"
+                            android:textColor="@color/green"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <com.huawei.vodafone.ui.myview.MyListview
+                        android:id="@+id/person_listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:divider="@drawable/line"
+                        android:dividerHeight="0.5dp"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:listSelector="@color/transparency"
+                        android:overScrollMode="never"
+                        android:scrollbars="none" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_dack_transparency"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/second_title_bar" 
+        android:id="@+id/tv_center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_center"
+        android:background="#333333"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/aa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="@string/want_to_log_out"
+            android:textColor="#EBEBEB"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_log_out_yes"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/aa"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="35dp"
+            android:background="#e60000"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/yes"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_log_out_no"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_log_out_yes"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#999999"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/no"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

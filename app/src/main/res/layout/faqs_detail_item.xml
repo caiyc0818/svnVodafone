@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="13dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="13dp"
+    android:paddingLeft="13dp"
+    android:paddingRight="13dp"
+    android:paddingTop="19dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/faq_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="81dp"
+            android:text="How"
+            android:textColor="@color/support_gray"
+            android:textSize="@dimen/text_size_three" />
+
+        <ImageView
+            android:id="@+id/show_iv"
+            android:layout_width="22dp"
+            android:layout_height="11.5dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/show_down" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/content_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</LinearLayout>

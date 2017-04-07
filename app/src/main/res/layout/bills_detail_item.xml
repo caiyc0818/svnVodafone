@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/lin_item"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal" >
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="12px"
+            android:layout_height="match_parent"
+            android:background="@drawable/detail_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingRight="10dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="15dp" >
+
+                <TextView
+                    android:id="@+id/tv_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="5 April 2016"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="€88.50"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Out of plan spend:"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="€12.85"
+                        android:textColor="#9c2aa0"
+                        android:textSize="14sp" />
+                </LinearLayout>
+         <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="1dp"
+                        android:text="Payment:"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+              <TextView
+                    android:id="@+id/tv_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="Not paid"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                </LinearLayout>
+              
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrows_img" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

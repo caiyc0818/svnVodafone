@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/half_more_transparency"
+    android:gravity="center_horizontal"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_support_bg"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/support_frame"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/buttom_bar"
+            android:layout_height="match_parent" />
+<include
+            android:id="@+id/buttom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            layout="@layout/support_buttom_bar" />
+        
+    </RelativeLayout>
+
+</LinearLayout>
