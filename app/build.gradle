@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 android {
+
     signingConfigs {
         config {
         }
@@ -17,13 +18,15 @@ android {
             enabled true
         }
         multiDexEnabled true
+        
     }
 
 
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true //改为false 就解决了
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
