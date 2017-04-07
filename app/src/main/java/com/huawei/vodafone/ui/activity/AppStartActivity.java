@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.huawei.vodafone.R;
-import com.huawei.vodafone.bills.activity.NetWorkUsageActivity;
 import com.igexin.sdk.PushManager;
+import com.igexin.sdk.PushService;
 
 /**
  * 引导界面
@@ -21,7 +21,7 @@ public class AppStartActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_app_start);
-		PushManager.getInstance().initialize(this.getApplicationContext());
+		PushManager.getInstance().initialize(this.getApplicationContext(), PushService.class);
 		handler.postDelayed(StartRunnable, 1500);
 
 	}

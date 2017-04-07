@@ -6,9 +6,7 @@
         <item name="android:clickable">true</item>
     </style>
 
-    <style name="Theme_Umeng_Push_Splash" parent="android:Theme.NoTitleBar.Fullscreen">
-        <item name="android:windowBackground">@drawable/umeng_push_default_splash_bg</item>
-    </style>
+
     <!-- Dialog对话框 -->
     <style name="MyLoadDialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
@@ -29,7 +27,7 @@
         <item name="android:gravity">center</item>
     </style>
     <!-- 顶部弹出框 -->
-    <style name="pop_dialog" parent="@android:Theme.Dialog">
+    <style name="pop_dialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowIsTranslucent">false</item>
