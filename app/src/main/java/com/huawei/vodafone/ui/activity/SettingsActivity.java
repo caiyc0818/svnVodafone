@@ -11,12 +11,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager.LayoutParams;
+import android.support.v7.widget.SwitchCompat;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.PopupWindow.OnDismissListener;
@@ -25,9 +27,14 @@ import android.widget.TextView;
 
 import com.huawei.vodafone.R;
 import com.huawei.vodafone.util.PreferenceUtils;
+import com.huawei.vodafone.util.SPUtils;
 import com.huawei.vodafone.util.StringUtils;
 
-public class SettingsActivity extends BaseActivity implements OnClickListener {
+import skin.support.SkinCompatManager;
+
+
+
+public class SettingsActivity extends BaseActivity implements OnClickListener, CompoundButton.OnCheckedChangeListener {
     private ImageView image_pin;
     private RelativeLayout image_persona;
     private ImageView back;
@@ -82,7 +89,6 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
 
         registerBoradcastReceiver();
     }
-
     private void initView() {
         // TODO Auto-generated method stub
         image_pin = (ImageView) findViewById(R.id.image_pin);
@@ -142,9 +148,39 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
         image_wife.setOnClickListener(this);
         image_language.setOnClickListener(this);
         image_terms.setOnClickListener(this);
-
+        SwitchCompat switchCompat = (SwitchCompat) findViewById(R.id.day_night_switch);
+        switchCompat.setOnCheckedChangeListener(this);
     }
-
+    @Override
+    public void onCheckedChanged(CompoundButton button, boolean checked) {
+//        if (checked) {
+////         做我们要实现的一些操作
+//            mDayNightHelper.setMode(DayNight.NIGHT);
+//            setTheme(R.style.NightTheme);
+//            switchMode();
+//            mText.setText("Night");
+//            mSwitchCompat.setChecked(true);
+//            mSwitchCompat2.setChecked(true);
+//            mSwitch2.setChecked(true);
+//        } else {
+//
+//            mDayNightHelper.setMode(DayNight.DAY);
+//            setTheme(R.style.DayTheme);
+//            switchMode();
+//            mText.setText("Day");
+//            mSwitchCompat.setChecked(false);
+//            mSwitchCompat2.setChecked(false);
+//            mSwitch2.setChecked(false);
+//        }
+        if (!SPUtils.getInstance().getNightMode()) {
+            SPUtils.getInstance().setCurSkin(SkinCompatManager.getInstance().getCurSkinName()).commitEditor();
+            SkinCompatManager.getInstance().loadSkin("night.skin");
+        } else {
+            SkinCompatManager.getInstance().loadSkin(SPUtils.getInstance().getCurSkin());
+        }
+        SPUtils.getInstance().setNightMode(!SPUtils.getInstance().getNightMode()).commitEditor();
+        button.setChecked(SPUtils.getInstance().getNightMode());
+    }
     @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub

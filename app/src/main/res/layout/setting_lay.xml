@@ -2,8 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bills_bg_img"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include layout="@layout/second_title_bar" />
 
@@ -446,6 +447,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
             </LinearLayout>
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/day_night_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="25dp"
+                android:longClickable="false"
+                android:textColor="@color/white"
+                android:textOff="Off"
+                android:textOn="On"
+                app:showText="true"
+                app:switchPadding="5dp"
+                app:switchTextAppearance="@style/SwitchCompat.Text"
+                app:theme="@style/SwitchCompat.Control"/>
         </LinearLayout>
     </ScrollView>
 

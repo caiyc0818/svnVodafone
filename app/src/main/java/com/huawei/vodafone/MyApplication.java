@@ -28,6 +28,9 @@ import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 
+import skin.support.SkinCompatManager;
+import skin.support.design.app.SkinMaterialViewInflater;
+
 
 public class MyApplication extends Application {
     private static MyApplication mInstance = null;
@@ -100,37 +103,35 @@ public class MyApplication extends Application {
                 .bitmapConfig(Bitmap.Config.RGB_565)
                 .displayer(new FadeInBitmapDisplayer(100)).build();
 
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
-                applicationContext)
-                .memoryCacheExtraOptions(480, 800)
-                // default = device screen dimensions即保存的每个缓存文件的最大长宽
-                .diskCacheExtraOptions(480, 800, null)
-                .threadPoolSize(3)
-                // 线程池数量
-                .threadPriority(Thread.NORM_PRIORITY - 2)
-                // 线程优先级
-                .tasksProcessingOrder(QueueProcessingType.FIFO)
-                // 设置图片下载和显示的工作队列排序
-                .denyCacheImageMultipleSizesInMemory()
-                // 当同一个Uri获取不同大小的图片，缓存到内存时，只缓存一个。默认会缓存多个不同的大小的相同图片
-                .memoryCache(new LruMemoryCache(2 * 1024 * 1024))
-                // 设置内存缓存方式 大小
-                .diskCache(new UnlimitedDiscCache(cacheDir))
-                // 磁盘缓存路径
-                .diskCacheSize(50 * 1024 * 1024)
-                // 磁盘缓存大小
-                .diskCacheFileCount(100)
-                // 缓存数量
-                .diskCacheFileNameGenerator(new Md5FileNameGenerator())
-                // 设置缓存文件的名字 将保存的时候的URI名称用MD5 加密
-                .imageDownloader(
-                        new BaseImageDownloader(applicationContext, 5 * 1000,
-                                30 * 1000)).defaultDisplayImageOptions(options)
-                // .writeDebugLogs()
-                // Remove for release app
-                .build();
-        ImageLoader.getInstance().init(config);// 全局初始化此配置
+        ImageLoaderConfiguration.Builder builder
 
+
+
+
+
+
+
+
+
+                 = new ImageLoaderConfiguration.Builder(
+                applicationContext);
+        builder.memoryCacheExtraOptions(480, 800);
+        builder.diskCacheExtraOptions(480, 800, null);
+        builder.threadPoolSize(3);
+        builder.threadPriority(Thread.NORM_PRIORITY - 2);
+        builder.tasksProcessingOrder(QueueProcessingType.FIFO);
+        builder.denyCacheImageMultipleSizesInMemory();
+        builder.memoryCache(new LruMemoryCache(2 * 1024 * 1024));
+        builder.diskCache(new UnlimitedDiscCache(cacheDir));
+        builder.diskCacheSize(50 * 1024 * 1024);
+        builder.diskCacheFileCount(100);
+        builder.diskCacheFileNameGenerator(new Md5FileNameGenerator());
+        builder.imageDownloader(
+                new BaseImageDownloader(applicationContext, 5 * 1000,
+                        30 * 1000));
+        builder.defaultDisplayImageOptions(options);
+        ImageLoaderConfiguration config = builder.build();
+        ImageLoader.getInstance().init(config);// 全局初始化此配置
     }
 
 

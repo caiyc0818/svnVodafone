@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.huawei.vodafone.R;
 
+
 /**
  * @author hanweipeng
  * @date 2015-8-27 下午2:16:12
