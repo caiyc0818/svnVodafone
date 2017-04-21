@@ -12,6 +12,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager.LayoutParams;
 import android.support.v7.widget.SwitchCompat;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -24,17 +25,21 @@ import android.widget.PopupWindow;
 import android.widget.PopupWindow.OnDismissListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.huawei.vodafone.R;
 import com.huawei.vodafone.util.PreferenceUtils;
 import com.huawei.vodafone.util.SPUtils;
 import com.huawei.vodafone.util.StringUtils;
+import com.huawei.vodafone.util.ToastUtil;
+import com.kyleduo.switchbutton.SwitchButton;
 
 import skin.support.SkinCompatManager;
+import skin.support.utils.SkinPreference;
 
 
 
-public class SettingsActivity extends BaseActivity implements OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class SettingsActivity extends BaseActivity implements OnClickListener {
     private ImageView image_pin;
     private RelativeLayout image_persona;
     private ImageView back;
@@ -148,39 +153,83 @@ public class SettingsActivity extends BaseActivity implements OnClickListener, C
         image_wife.setOnClickListener(this);
         image_language.setOnClickListener(this);
         image_terms.setOnClickListener(this);
-        SwitchCompat switchCompat = (SwitchCompat) findViewById(R.id.day_night_switch);
-        switchCompat.setOnCheckedChangeListener(this);
+        SwitchButton switchCompat = (SwitchButton) findViewById(R.id.day_night_switch);
+        switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (!SPUtils.getInstance().getNightMode()) {
+                          SPUtils.getInstance().setCurSkin(SkinCompatManager.getInstance().getCurSkinName()).commitEditor();
+                    SkinCompatManager.getInstance().loadSkin("night.skin", new SkinCompatManager.SkinLoaderListener() {
+                        @Override
+                        public void onStart() {
+                            ToastUtil.showToast(SettingsActivity.this,"star");
+                    }
+
+                        @Override
+                        public void onSuccess() {
+                            ToastUtil.showToast(SettingsActivity.this,"onSuccess");
+                        }
+
+                        @Override
+                        public void onFailed(String errMsg) {
+                            ToastUtil.showToast(SettingsActivity.this,errMsg);
+
+                        }
+                    });
+                        } else {
+                            SkinCompatManager.getInstance().loadSkin(SPUtils.getInstance().getCurSkin());
+                          }
+                      SPUtils.getInstance().setNightMode(!SPUtils.getInstance().getNightMode()).commitEditor();
+                buttonView.setChecked(SPUtils.getInstance().getNightMode());
+
+                // 指定皮肤插件
+                if (TextUtils.isEmpty(SkinPreference.getInstance().getSkinName())) {
+                    SkinCompatManager.getInstance().loadSkin("night.skin", new SkinCompatManager.SkinLoaderListener() {
+                        @Override
+                        public void onStart() {
+                            ToastUtil.showToast(SettingsActivity.this,"star");
+                        }
+
+                        @Override
+                        public void onSuccess() {
+                            ToastUtil.showToast(SettingsActivity.this,"onSuccess");
+                        }
+
+                        @Override
+                        public void onFailed(String errMsg) {
+                            ToastUtil.showToast(SettingsActivity.this,errMsg);
+
+                        }
+                    });
+                } else {
+                    SkinCompatManager.getInstance().restoreDefaultTheme();
+                }
+                buttonView.setChecked(isChecked);
+            }
+        });
     }
-    @Override
-    public void onCheckedChanged(CompoundButton button, boolean checked) {
-//        if (checked) {
-////         做我们要实现的一些操作
-//            mDayNightHelper.setMode(DayNight.NIGHT);
-//            setTheme(R.style.NightTheme);
-//            switchMode();
-//            mText.setText("Night");
-//            mSwitchCompat.setChecked(true);
-//            mSwitchCompat2.setChecked(true);
-//            mSwitch2.setChecked(true);
-//        } else {
-//
-//            mDayNightHelper.setMode(DayNight.DAY);
-//            setTheme(R.style.DayTheme);
-//            switchMode();
-//            mText.setText("Day");
-//            mSwitchCompat.setChecked(false);
-//            mSwitchCompat2.setChecked(false);
-//            mSwitch2.setChecked(false);
-//        }
-        if (!SPUtils.getInstance().getNightMode()) {
-            SPUtils.getInstance().setCurSkin(SkinCompatManager.getInstance().getCurSkinName()).commitEditor();
-            SkinCompatManager.getInstance().loadSkin("night.skin");
-        } else {
-            SkinCompatManager.getInstance().loadSkin(SPUtils.getInstance().getCurSkin());
-        }
-        SPUtils.getInstance().setNightMode(!SPUtils.getInstance().getNightMode()).commitEditor();
-        button.setChecked(SPUtils.getInstance().getNightMode());
-    }
+//    @Override
+//    public void onCheckedChanged(CompoundButton button, boolean checked) {
+////        if (checked) {
+//////         做我们要实现的一些操作
+////            mDayNightHelper.setMode(DayNight.NIGHT);
+////            setTheme(R.style.NightTheme);
+////            switchMode();
+////            mText.setText("Night");
+////            mSwitchCompat.setChecked(true);
+////            mSwitchCompat2.setChecked(true);
+////            mSwitch2.setChecked(true);
+////        } else {
+////
+////            mDayNightHelper.setMode(DayNight.DAY);
+////            setTheme(R.style.DayTheme);
+////            switchMode();
+////            mText.setText("Day");
+////            mSwitchCompat.setChecked(false);
+////            mSwitchCompat2.setChecked(false);
+////            mSwitch2.setChecked(false);
+////        }
+//    }
     @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub

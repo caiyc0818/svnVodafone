@@ -16,6 +16,7 @@ import android.text.TextUtils;
 import android.util.DisplayMetrics;
 
 import com.huawei.vodafone.util.AppConfig;
+import com.huawei.vodafone.util.SPUtils;
 import com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache;
@@ -29,6 +30,7 @@ import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 
 import skin.support.SkinCompatManager;
+import skin.support.design.SkinMaterialManager;
 import skin.support.design.app.SkinMaterialViewInflater;
 
 
@@ -71,6 +73,9 @@ public class MyApplication extends Application {
     public void onCreate() {
         // TODO Auto-generated method stub
         super.onCreate();
+        SkinMaterialManager.init(this);
+        SkinCompatManager.init(this).loadSkin();
+        SPUtils.init(this);
         mInstance = this;
         applicationContext = getApplicationContext();
         iniData();
@@ -132,6 +137,10 @@ public class MyApplication extends Application {
         builder.defaultDisplayImageOptions(options);
         ImageLoaderConfiguration config = builder.build();
         ImageLoader.getInstance().init(config);// 全局初始化此配置
+
+
+
+
     }
 
 

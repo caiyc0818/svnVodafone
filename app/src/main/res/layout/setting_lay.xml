@@ -78,6 +78,40 @@
                         android:button="@null"
                         android:checked="false" />
                 </RelativeLayout>
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/day_night_switch"
+                    style="@style/SwitchButtonMD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_use_toggle"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:focusable="false"/>
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_use_checked"
+                    style="@style/SwitchButtonStyleMD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:focusable="false"/>
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_use_listener"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <com.kyleduo.switchbutton.SwitchButton
+                    android:id="@+id/sb_use_delay"
+                    style="@style/SwitchButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:kswTintColor="#16A560"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -447,21 +481,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="20dp" />
             </LinearLayout>
-            <android.support.v7.widget.SwitchCompat
-                android:id="@+id/day_night_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="25dp"
-                android:longClickable="false"
-                android:textColor="@color/white"
-                android:textOff="Off"
-                android:textOn="On"
-                app:showText="true"
-                app:switchPadding="5dp"
-                app:switchTextAppearance="@style/SwitchCompat.Text"
-                app:theme="@style/SwitchCompat.Control"/>
+
         </LinearLayout>
+
+
     </ScrollView>
 
 </LinearLayout>

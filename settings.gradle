@@ -1,2 +1,2 @@
-include ':app', ':skin-night', ':skin-white'
+include ':app', ':skin-night'
 

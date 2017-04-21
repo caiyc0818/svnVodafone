@@ -120,14 +120,34 @@
     </style>
     <style name="SwitchCompat.Control" parent="Theme.AppCompat.Light">
         <!-- active thumb & track color (30% transparency) -->
-        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlActivated">@color/red_dack</item>
         <item name="colorSwitchThumbNormal">@color/green</item>
         <item name="android:colorForeground">@color/green</item>
     </style>
 
     <style name="SwitchCompat.Text" parent="Theme.AppCompat.Light">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">9dp</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+    <style name="StyleTitleText">
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SwitchButtonStyle">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="SwitchButtonStyleMD" parent="SwitchButtonMD">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
     </style>
 
 </resources>

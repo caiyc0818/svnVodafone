@@ -20,12 +20,14 @@ import android.widget.TextView;
 
 import com.huawei.vodafone.R;
 
+import skin.support.app.SkinCompatActivity;
+
 
 /**
  * @author hanweipeng
  * @date 2015-8-27 下午2:16:12
  */
-public class BaseActivity extends Activity implements OnClickListener {
+public class BaseActivity extends SkinCompatActivity implements OnClickListener {
 
 	/*
 	 * 屏幕高度
