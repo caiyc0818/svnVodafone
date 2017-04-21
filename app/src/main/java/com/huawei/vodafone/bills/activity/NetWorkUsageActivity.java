@@ -18,6 +18,7 @@ import com.huawei.vodafone.MyApplication;
 import com.huawei.vodafone.R;
 import com.huawei.vodafone.bean.UserInfo;
 import com.huawei.vodafone.ui.activity.BaseActivity;
+import com.huawei.vodafone.ui.activity.BaseFragmentActivity;
 import com.huawei.vodafone.ui.myview.CircleImageView;
 import com.huawei.vodafone.ui.myview.MyListview;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -27,7 +28,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
  *
  * @create 2016年7月23日 上午10:39:10
  */
-public class NetWorkUsageActivity extends FragmentActivity implements
+public class NetWorkUsageActivity extends BaseFragmentActivity implements
 		OnClickListener {
 	private ImageView ivBottomLine, back_img, img_data, img_calls;
 	private TextView tv_chargeable, tv_non, tv_all, title, tv_name, tv_phone,

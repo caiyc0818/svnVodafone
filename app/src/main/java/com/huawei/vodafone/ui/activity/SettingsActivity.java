@@ -154,6 +154,7 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
         image_language.setOnClickListener(this);
         image_terms.setOnClickListener(this);
         SwitchButton switchCompat = (SwitchButton) findViewById(R.id.day_night_switch);
+        switchCompat.setChecked(SPUtils.getInstance().getNightMode());
         switchCompat.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -177,34 +178,10 @@ public class SettingsActivity extends BaseActivity implements OnClickListener {
                         }
                     });
                         } else {
-                            SkinCompatManager.getInstance().loadSkin(SPUtils.getInstance().getCurSkin());
+                    SkinCompatManager.getInstance().restoreDefaultTheme();
                           }
                       SPUtils.getInstance().setNightMode(!SPUtils.getInstance().getNightMode()).commitEditor();
                 buttonView.setChecked(SPUtils.getInstance().getNightMode());
-
-                // 指定皮肤插件
-                if (TextUtils.isEmpty(SkinPreference.getInstance().getSkinName())) {
-                    SkinCompatManager.getInstance().loadSkin("night.skin", new SkinCompatManager.SkinLoaderListener() {
-                        @Override
-                        public void onStart() {
-                            ToastUtil.showToast(SettingsActivity.this,"star");
-                        }
-
-                        @Override
-                        public void onSuccess() {
-                            ToastUtil.showToast(SettingsActivity.this,"onSuccess");
-                        }
-
-                        @Override
-                        public void onFailed(String errMsg) {
-                            ToastUtil.showToast(SettingsActivity.this,errMsg);
-
-                        }
-                    });
-                } else {
-                    SkinCompatManager.getInstance().restoreDefaultTheme();
-                }
-                buttonView.setChecked(isChecked);
             }
         });
     }

@@ -19,11 +19,13 @@ import android.widget.TextView;
 
 import com.huawei.vodafone.R;
 
+import skin.support.app.SkinCompatActivity;
+
 /**
  * @author hanweipeng
  * @date 2015-8-27 下午2:16:12
  */
-public class BaseFragmentActivity extends FragmentActivity implements
+public class BaseFragmentActivity extends SkinCompatActivity implements
 		OnClickListener {
 
 	/*
