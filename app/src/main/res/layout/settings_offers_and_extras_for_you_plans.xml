@@ -173,21 +173,10 @@
                             android:textSize="@dimen/text_size_one" >
                         </TextView>
                     </LinearLayout>
-
-                    <com.huawei.vodafone.ui.myview.MyListview
-                        android:id="@+id/plans_listView"
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_recyclerview"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginTop="10dp"
-                        android:divider="#ffffff"
-                        android:dividerHeight="0dp"
-                        android:focusable="false"
-                        android:focusableInTouchMode="false"
-                        android:listSelector="@color/transparency"
-                        android:overScrollMode="never"
-                        android:scrollbars="none" />
+                        android:layout_height="match_parent"/>
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>

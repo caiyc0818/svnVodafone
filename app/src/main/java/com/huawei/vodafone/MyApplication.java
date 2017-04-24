@@ -1,9 +1,5 @@
 package com.huawei.vodafone;
 
-import java.io.File;
-import java.util.Properties;
-import java.util.UUID;
-
 import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -29,9 +25,12 @@ import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.download.BaseImageDownloader;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 
+import java.io.File;
+import java.util.Properties;
+import java.util.UUID;
+
 import skin.support.SkinCompatManager;
 import skin.support.design.SkinMaterialManager;
-import skin.support.design.app.SkinMaterialViewInflater;
 
 
 public class MyApplication extends Application {
@@ -68,7 +67,6 @@ public class MyApplication extends Application {
     private static final String TAG = MyApplication.class.getName();
     public static final String UPDATE_STATUS_ACTION = "com.umeng.message.example.action.UPDATE_STATUS";
     private Handler handler;
-
     @Override
     public void onCreate() {
         // TODO Auto-generated method stub
@@ -137,7 +135,6 @@ public class MyApplication extends Application {
         builder.defaultDisplayImageOptions(options);
         ImageLoaderConfiguration config = builder.build();
         ImageLoader.getInstance().init(config);// 全局初始化此配置
-
 
 
 

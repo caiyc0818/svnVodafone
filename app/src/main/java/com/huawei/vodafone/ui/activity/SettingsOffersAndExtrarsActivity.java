@@ -1,13 +1,5 @@
 package com.huawei.vodafone.ui.activity;
 
-import java.io.Serializable;
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -39,6 +31,14 @@ import com.huawei.vodafone.ui.fragment.FragmentPagerAdapter;
 import com.huawei.vodafone.ui.fragment.Offers_Fragment1;
 import com.huawei.vodafone.util.DensityUtil;
 import com.huawei.vodafone.util.JsonUtils;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.Serializable;
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SettingsOffersAndExtrarsActivity extends BaseFragmentActivity
 		implements OnClickListener, RequestListener {

@@ -43,6 +43,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    dexOptions {
+        preDexLibraries false
+        incremental false
+        javaMaxHeapSize "4096m"
+    }
 }
 
 dependencies {
@@ -52,4 +57,6 @@ dependencies {
     compile 'skin.support:skin-support:1.2.6'          // skin-support 基础控件支持
     compile 'skin.support:skin-support-design:1.2.3'   // skin-support-design material design 控件支持[可选]
     compile 'com.kyleduo.switchbutton:library:1.4.5'
+    compile 'com.zhy:base-rvadapter:3.0.3'//万能的recyclerView adapter
+
 }
