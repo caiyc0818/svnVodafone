@@ -58,5 +58,5 @@ dependencies {
     compile 'skin.support:skin-support-design:1.2.3'   // skin-support-design material design 控件支持[可选]
     compile 'com.kyleduo.switchbutton:library:1.4.5'
     compile 'com.zhy:base-rvadapter:3.0.3'//万能的recyclerView adapter
-
+    compile 'com.lcodecorex:tkrefreshlayout:1.0.7'
 }

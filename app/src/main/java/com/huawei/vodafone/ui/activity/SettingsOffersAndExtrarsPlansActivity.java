@@ -11,13 +11,13 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.animation.Interpolator;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
@@ -50,9 +50,14 @@ import com.huawei.vodafone.util.DiyUtilsFromId;
 import com.huawei.vodafone.util.JsonUtils;
 import com.huawei.vodafone.util.PreferenceUtils;
 import com.huawei.vodafone.util.StringUtils;
+import com.lcodecore.tkrefreshlayout.RefreshListenerAdapter;
+import com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout;
+import com.lcodecore.tkrefreshlayout.footer.LoadingView;
+import com.lcodecore.tkrefreshlayout.header.progresslayout.ProgressLayout;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.MultiItemTypeAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
+import com.zhy.adapter.recyclerview.wrapper.HeaderAndFooterWrapper;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -96,12 +101,15 @@ public class SettingsOffersAndExtrarsPlansActivity extends BaseFragmentActivity
     private TextView money;
     private PlansBean plansBean;
     private List<PlansItem> plansList;
+    private List<PlansItem> allplansList = new ArrayList<>();
     private QuickCheckInfo quickcheckinfo;
     private LinearLayout ll1;
     private ImageView image_line;
     private RecyclerView recyclerview;
     private CommonAdapter reAdapter;
-
+    private Boolean isLoadMore =false;
+    private HeaderAndFooterWrapper mHeaderAndFooterWrapper;
+    TwinklingRefreshLayout refreshLayout;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,45 +119,21 @@ public class SettingsOffersAndExtrarsPlansActivity extends BaseFragmentActivity
     }
 
     private void initView() {
-        viewPager = (ViewPager) findViewById(R.id.carousel_vp);
-        dotsLayout = (LinearLayout) findViewById(R.id.carousel_dots);
-        chatWhatRl = (LinearLayout) findViewById(R.id.chat_what_rl);
-        ll1 = (LinearLayout) findViewById(R.id.ll1);
-        image_line = (ImageView) findViewById(R.id.image_line);
-        rela = (RelativeLayout) findViewById(R.id.rela);
-        rela.setOnClickListener(this);
-        chatWhatRl.setOnClickListener(this);
-        chatWhatTv = (TextView) findViewById(R.id.chat_what_tv);
+
         text1 = (TextView) findViewById(R.id.text1);
         data = (TextView) findViewById(R.id.uk_date);
         texts = (TextView) findViewById(R.id.texts);
         call = (TextView) findViewById(R.id.call);
         money = (TextView) findViewById(R.id.un3);
-        chatWhatIv = (ImageView) findViewById(R.id.chat_what_iv);
-        chatWhatLv = (MyListview) findViewById(R.id.chat_what_lv);
-        chatWhatIv = (ImageView) findViewById(R.id.chat_what_iv);
-        chatWhatAdapter = new ChatWhatAdapter(chatWhatStrs, SettingsOffersAndExtrarsPlansActivity.this);
-        chatWhatLv.setAdapter(chatWhatAdapter);
-        chatWhatLv.setOnItemClickListener(new OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-                // TODO Auto-generated method stub
-                chatWhatTv.setText(chatWhatStrs.get(arg2));
-                chatWhatStrs.clear();
-                chatWhatAdapter.notifyDataSetChanged();
-                chatWhatIv.animate().rotation(0);
-                chatWhatRl.setBackgroundResource(R.drawable.shape_faqs_et_bg);
-            }
-        });
+        rela = (RelativeLayout) findViewById(R.id.rela);
+        rela.setOnClickListener(this);
         go_down = (LinearLayout) findViewById(R.id.go_down);
         rela_plans = (RelativeLayout) findViewById(R.id.rela_plans);
         go_down.setOnClickListener(this);
         rela_plans.setOnClickListener(this);
-        mScrollView = (ScrollView) findViewById(R.id.scrollView);
         tips = (LinearLayout) findViewById(R.id.tips);
-        Filter = (TextView) findViewById(R.id.Filter);
-        Filter.setOnClickListener(this);
+
+
         // mScrollView.setOnTouchListener(new TouchListenerImpl());
         recyclerview = (RecyclerView) findViewById(R.id.id_recyclerview);
         recyclerview.setFocusable(false);
@@ -160,7 +144,52 @@ public class SettingsOffersAndExtrarsPlansActivity extends BaseFragmentActivity
                 SettingsOffersAndExtrarsPlansActivity.this);
         IRequest.post(URLs.QUERYFREEUNIT, 3, RequestJSon.QueryFreeUnit(), this);
         registerBoradcastReceiver();
+         refreshLayout = (TwinklingRefreshLayout) findViewById(R.id.refreshLayout);
+        ProgressLayout header = new ProgressLayout(this);
+        refreshLayout.setHeaderView(header);
+        refreshLayout.setFloatRefresh(false);
+        refreshLayout.setOverScrollBottomShow(true);
+        refreshLayout.setEnableOverScroll(false);
+        refreshLayout.setOverScrollRefreshShow(false);
+        refreshLayout.setHeaderHeight(100);
+        refreshLayout.setBottomHeight(100);
+        refreshLayout.setBottomView(new LoadingView(this));
+        refreshLayout.setOverScrollTopShow(false);
+        refreshLayout.setEnableRefresh(false);
+        header.setColorSchemeResources(R.color.Blue,R.color.Orange,R.color.Yellow,R.color.Green);
+//        header.setColorSchemeColors(0xff4674e7,0xff0ba62c);
+        refreshLayout.setOnRefreshListener(new RefreshListenerAdapter() {
+            @Override
+            public void onRefresh(final TwinklingRefreshLayout refreshLayout) {
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        refreshLayout.finishRefreshing();
+                    }
+                }, 4000);
+            }
 
+            @Override
+            public void onLoadMore(TwinklingRefreshLayout refreshLayout) {
+                super.onLoadMore(refreshLayout);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        isLoadMore = true;
+
+                        IRequest.get(16, URLs.RANK_COMBINATION_AND_PRICE, RequestJSon.rankCombinationAndPrice(),
+                                SettingsOffersAndExtrarsPlansActivity.this);
+                    }
+                }, 300);
+            }
+        });
+        recyclerview.setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                v.getParent().requestDisallowInterceptTouchEvent(true);
+                return false;
+            }
+        });
     }
 
     private void isDIYShowOrHint() {
@@ -209,6 +238,7 @@ public class SettingsOffersAndExtrarsPlansActivity extends BaseFragmentActivity
         }
     }
 
+
     public void registerBoradcastReceiver() {
         IntentFilter myIntentFilter = new IntentFilter();
         myIntentFilter.addAction("offer_diy_successed");
@@ -218,6 +248,12 @@ public class SettingsOffersAndExtrarsPlansActivity extends BaseFragmentActivity
 
     private void unRegisterBoradcastReceiver() {
         SettingsOffersAndExtrarsPlansActivity.this.unregisterReceiver(mBroadcastReceiver);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unRegisterBoradcastReceiver();
     }
 
     private BroadcastReceiver mBroadcastReceiver = new BroadcastReceiver() {
@@ -494,74 +530,116 @@ public class SettingsOffersAndExtrarsPlansActivity extends BaseFragmentActivity
                     if ("0".equals(code)) {
                         plansBean = JsonUtils.getBodyObject(json, PlansBean.class);
                         plansList = plansBean.getItemList();
-                        reAdapter  = new CommonAdapter(this, R.layout.plans_item, plansList) {
-                            @Override
-                            protected void convert(ViewHolder holder, Object o, int position) {
-                                PlansItem pc = (PlansItem)o;
-                                if (position == plansList.size() - 1) {
-                                    holder.getView(R.id.plus_choose).setVisibility(View.VISIBLE);
-                                    holder.getView(R.id.plus_choose).setOnClickListener(new OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
+                        allplansList .addAll(plansList);
+                        if(isLoadMore){
+                            refreshLayout.finishLoadmore();
+                            mHeaderAndFooterWrapper.notifyDataSetChanged();
+                            return;
+                        }else{
+                            reAdapter  = new CommonAdapter(this, R.layout.plans_item, allplansList) {
+                                @Override
+                                protected void convert(ViewHolder holder, Object o, int position) {
+                                    PlansItem pc = (PlansItem)o;
+                                    if (position == allplansList.size() ) {
+                                        holder.getView(R.id.plus_choose).setVisibility(View.VISIBLE);
+                                        holder.getView(R.id.plus_choose).setOnClickListener(new OnClickListener() {
+                                            @Override
+                                            public void onClick(View v) {
 
-                                        }
-                                    });
-                                } else {
-                                    holder.getView(R.id.plus_choose).setVisibility(View.GONE);
-                                }
-                                double money = 0;
-                                int unit = Integer.valueOf(pc.getFee().getCurrencyUnit());
-                                money = money + pc.getFee().getCurrencyValue() * Math.pow(10, -unit);
-                                holder.setText(R.id.un3, "€" + money + " " + getResources().getString(R.string.settings_per_month));
-                                if (pc.getLevelList() != null) {
-                                    for (int i = 0; i < pc.getLevelList().size(); i++) {
-                                        if ("C_DATA_LEVEL".equals(pc.getLevelList().get(i).getItemId())) {
-                                            holder.setText(R.id.uk_date, DiyUtils.getDataValue(Integer.parseInt(pc.getLevelList().get(i).getLevelId())));
-                                            holder.setText(R.id.text1,
-                                                    DiyUtils.getDataValue(Integer.parseInt(pc.getLevelList().get(i).getLevelId())));
-                                        } else if ("C_UNIT_LEVEL".equals(pc.getLevelList().get(i).getItemId())) {
-                                            holder.setText(R.id.un, DiyUtils.getVoiceValue(Integer.parseInt(pc.getLevelList().get(i).getLevelId())));
-                                        } else if ("C_SMS_LEVEL".equals(pc.getLevelList().get(i).getItemId())) {
-                                            holder.setText(R.id.un22,
-                                                    DiyUtils.getSmsValue(Integer.parseInt(pc.getLevelList().get(i).getLevelId())) + " ");
-                                        }
+                                            }
+                                        });
+                                    } else {
+                                        holder.getView(R.id.plus_choose).setVisibility(View.GONE);
                                     }
+                                    double money = 0;
+                                    int unit = Integer.valueOf(pc.getFee().getCurrencyUnit());
+                                    money = money + pc.getFee().getCurrencyValue() * Math.pow(10, -unit);
+                                    holder.setText(R.id.un3, "€" + money + " " + getResources().getString(R.string.settings_per_month));
+                                    if (pc.getLevelList() != null) {
+                                        for (int i = 0; i < pc.getLevelList().size(); i++) {
+                                            if ("C_DATA_LEVEL".equals(pc.getLevelList().get(i).getItemId())) {
+                                                holder.setText(R.id.uk_date, DiyUtils.getDataValue(Integer.parseInt(pc.getLevelList().get(i).getLevelId())));
+                                                holder.setText(R.id.text1,
+                                                        DiyUtils.getDataValue(Integer.parseInt(pc.getLevelList().get(i).getLevelId())));
+                                            } else if ("C_UNIT_LEVEL".equals(pc.getLevelList().get(i).getItemId())) {
+                                                holder.setText(R.id.un, DiyUtils.getVoiceValue(Integer.parseInt(pc.getLevelList().get(i).getLevelId())));
+                                            } else if ("C_SMS_LEVEL".equals(pc.getLevelList().get(i).getItemId())) {
+                                                holder.setText(R.id.un22,
+                                                        DiyUtils.getSmsValue(Integer.parseInt(pc.getLevelList().get(i).getLevelId())) + " ");
+                                            }
+                                        }
 
+                                    }
+                                }
+
+                            };
+                            reAdapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
+                                    Intent intent = new Intent(SettingsOffersAndExtrarsPlansActivity.this,
+                                            SettingsOffersAndExtrarsPlansDetailsActivity.class);
+                                    Bundle extras = new Bundle();
+                                    extras.putSerializable("plans_details", allplansList.get(position));
+                                    intent.putExtras(extras);
+                                    SettingsOffersAndExtrarsPlansActivity.this.startActivity(intent);
+                                    overridePendingTransition(R.anim.activity_new, R.anim.activity_out);
+                                }
+
+                                @Override
+                                public boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position) {
+                                    return false;
+                                }
+                            });
+                            mHeaderAndFooterWrapper = new HeaderAndFooterWrapper(reAdapter);
+                            View view = LayoutInflater.from(this).inflate(R.layout.table_layout,null);
+                            mHeaderAndFooterWrapper.addHeaderView(view);
+
+                            recyclerview.setAdapter(mHeaderAndFooterWrapper);
+                            mHeaderAndFooterWrapper.notifyDataSetChanged();
+
+                            Filter = (TextView) view.findViewById(R.id.Filter);
+                            Filter.setOnClickListener(this);
+                            viewPager = (ViewPager) view.findViewById(R.id.carousel_vp);
+                            dotsLayout = (LinearLayout) view.findViewById(R.id.carousel_dots);
+                            chatWhatRl = (LinearLayout) view.findViewById(R.id.chat_what_rl1);
+                            ll1 = (LinearLayout) view.findViewById(R.id.ll1);
+                            image_line = (ImageView) view.findViewById(R.id.image_line);
+
+                            chatWhatRl.setOnClickListener(this);
+                            chatWhatTv = (TextView) view.findViewById(R.id.chat_what_tv);
+                            chatWhatIv = (ImageView) view.findViewById(R.id.chat_what_iv);
+                            chatWhatLv = (MyListview) view.findViewById(R.id.chat_what_lv);
+                            chatWhatIv = (ImageView) view.findViewById(R.id.chat_what_iv);
+                            chatWhatAdapter = new ChatWhatAdapter(chatWhatStrs, SettingsOffersAndExtrarsPlansActivity.this);
+                            chatWhatLv.setAdapter(chatWhatAdapter);
+                            chatWhatLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                                @Override
+                                public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                                    // TODO Auto-generated method stub
+                                    chatWhatTv.setText(chatWhatStrs.get(arg2));
+                                    chatWhatStrs.clear();
+                                    chatWhatAdapter.notifyDataSetChanged();
+                                    chatWhatIv.animate().rotation(0);
+                                    chatWhatRl.setBackgroundResource(R.drawable.shape_faqs_et_bg);
+                                }
+                            });
+                            for (int i = 0; i < plansList.size(); i++) {
+                                if (i <= 2) {
+                                    Bundle data = new Bundle();
+                                    data.putInt("type", i);
+                                    data.putSerializable("DiyList", (Serializable) plansList);
+                                    Offers_Fragment1 OfferFragment = new Offers_Fragment1();
+                                    OfferFragment.setArguments(data);
+                                    pushResourceList.add(OfferFragment);
+                                } else {
+                                    break;
                                 }
                             }
-
-                        };
-                        reAdapter.setOnItemClickListener(new MultiItemTypeAdapter.OnItemClickListener() {
-                            @Override
-                            public void onItemClick(View view, RecyclerView.ViewHolder holder, int position) {
-                                Intent intent = new Intent(SettingsOffersAndExtrarsPlansActivity.this,
-                                        SettingsOffersAndExtrarsPlansDetailsActivity.class);
-                                Bundle extras = new Bundle();
-                                extras.putSerializable("plans_details", plansList.get(position));
-                                intent.putExtras(extras);
-                                SettingsOffersAndExtrarsPlansActivity.this.startActivity(intent);
-                                overridePendingTransition(R.anim.activity_new, R.anim.activity_out);
-                            }
-
-                            @Override
-                            public boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position) {
-                                return false;
-                            }
-                        });
-                        recyclerview.setAdapter(reAdapter);
-                        for (int i = 0; i < plansList.size(); i++) {
-                            if (i <= 2) {
-                                Bundle data = new Bundle();
-                                data.putInt("type", i);
-                                data.putSerializable("DiyList", (Serializable) plansList);
-                                Offers_Fragment1 OfferFragment = new Offers_Fragment1();
-                                OfferFragment.setArguments(data);
-                                pushResourceList.add(OfferFragment);
-                            } else {
-                                break;
-                            }
+                            addCarousel(pushResourceList);
                         }
-                        addCarousel(pushResourceList);
+
+
                     } else {
 
                     }

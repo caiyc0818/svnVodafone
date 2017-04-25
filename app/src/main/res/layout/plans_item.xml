@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" >
+    android:orientation="vertical">
+
+
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@drawable/settings_item_back" >
+        android:background="@drawable/settings_item_back">
 
         <TextView
             android:id="@+id/text"
@@ -133,8 +135,8 @@
             android:layout_below="@+id/un3"
             android:layout_marginBottom="10dp"
             android:layout_marginTop="10dp"
-            android:visibility="gone"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:visibility="gone">
 
             <TextView
                 android:id="@+id/un4"
@@ -149,14 +151,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
                     android:scaleType="centerCrop"
-                    
+
                     android:src="@drawable/plans_01" />
 
                 <ImageView
@@ -167,8 +169,8 @@
                     android:src="@drawable/plans_02" />
 
                 <ImageView
-                    android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginRight="20dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/plans_03" />
